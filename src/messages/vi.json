@@ -1,0 +1,128 @@
+{
+  "navigation": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "blog": "Blog",
+    "contact": "Liên hệ"
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Lỗi",
+    "readMore": "Đọc thêm",
+    "back": "Quay lại"
+  },
+  "header": {
+    "welcome": "Chào mừng đến với portfolio của tôi",
+    "hello": "Xin chào!",
+    "im": "Tôi là",
+    "a": "một",
+    "juniorDeveloper": "{Lập trình viên Junior.}"
+  },
+  "blog": {
+    "title": "Blog",
+    "backToBlog": "Quay lại Blog",
+    "published": "Đăng vào"
+  },
+  "components": {
+    "preview": "Xem trước",
+    "code": "Mã nguồn",
+    "installation": "Cài đặt",
+    "usage": "Cách sử dụng",
+    "props": "Thuộc tính",
+    "references": "Tham khảo",
+    "acknowledgments": "Lời cảm ơn"
+  },
+  "user": {
+    "bio": "Sáng tạo bằng mã nguồn, thúc đẩy bởi đam mê.",
+    "jobTitle": "Lập trình viên & Nhà thiết kế UI/UX",
+    "address": "Thành phố Hồ Chí Minh, Việt Nam",
+    "flipSentences": {
+      "softwareDeveloper": "Lập trình viên",
+      "uiUxDesigner": "Nhà thiết kế UI/UX",
+      "openSourceContributor": "Người đóng góp mã nguồn mở"
+    }
+  },
+  "awards": {
+    "title": "Giải thưởng",
+    "prize": "Giải thưởng",
+    "date": "Ngày",
+    "grade": "Lớp",
+    "description": "Mô tả",
+    "field": "Lĩnh vực",
+    "project": "Dự án",
+    "organizedIn": "Tổ chức tại",
+    "subject": "Môn học",
+    "programmingLanguage": "Ngôn ngữ lập trình",
+    "completed": "Hoàn thành",
+    "within": "trong vòng",
+    "hours": "giờ",
+    "youngestTeam": "Đội thi trẻ tuổi nhất giành giải"
+  },
+  "certifications": {
+    "title": "Chứng chỉ",
+    "issuer": "Tổ chức cấp",
+    "issueDate": "Ngày cấp",
+    "credentialID": "Mã chứng chỉ",
+    "credentialURL": "URL chứng chỉ"
+  },
+  "experiences": {
+    "title": "Kinh nghiệm",
+    "employmentType": {
+      "fullTime": "Toàn thời gian",
+      "partTime": "Bán thời gian"
+    },
+    "current": "Hiện tại",
+    "description": "Mô tả",
+    "skills": "Kỹ năng",
+    "education": {
+      "title": "Học vấn",
+      "currentlyStudying": "Đang theo học chương trình Cử nhân ngành",
+      "languageProficiency": "Trình độ ngoại ngữ",
+      "achievedAwards": "Đạt được nhiều giải thưởng",
+      "outstandingStudent": "Học sinh giỏi",
+      "developedFeature": "Phát triển tính năng",
+      "developedWebsites": "Phát triển các website",
+      "builtWebsites": "Xây dựng các website"
+    }
+  },
+  "projects": {
+    "title": "Dự án",
+    "time": "Thời gian",
+    "tags": "Thẻ",
+    "description": "Mô tả",
+    "sourceCode": "Mã nguồn",
+    "server": "Máy chủ",
+    "client": "Máy khách",
+    "course": "Môn học",
+    "projectScore": "Điểm dự án",
+    "requirement": "Yêu cầu",
+    "features": "Tính năng",
+    "specialFeature": "Tính năng đặc biệt",
+    "functions": "Chức năng"
+  },
+  "social": {
+    "title": "Liên kết mạng xã hội",
+    "connect": "Kết nối với tôi trên"
+  },
+  "techStack": {
+    "title": "Công nghệ",
+    "categories": {
+      "language": "Ngôn ngữ",
+      "runtimeEnvironment": "Môi trường thực thi",
+      "library": "Thư viện",
+      "uiLibrary": "Thư viện UI",
+      "framework": "Framework",
+      "stateManagement": "Quản lý trạng thái",
+      "navigation": "Điều hướng",
+      "versionControl": "Quản lý phiên bản",
+      "containerization": "Container hóa",
+      "database": "Cơ sở dữ liệu",
+      "tools": "Công cụ",
+      "design": "Thiết kế",
+      "ai": "Trí tuệ nhân tạo"
+    }
+  },
+  "welcome": "Chào mừng đến với portfolio của tôi",
+  "intro": "Tôi là một developer đam mê với việc tạo ra những ứng dụng web đẹp và chức năng.",
+  "displayName": "Chanh Đại"
+}

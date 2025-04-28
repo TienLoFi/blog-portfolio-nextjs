@@ -16,14 +16,14 @@ export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="relative size-12 shrink-0">
+      <div className="relative size-8 shrink-0">
         {typeof icon === "string" && icon.startsWith("/") ? (
           <Image
             className="rounded-xl"
             src={icon}
             alt={`${title}'s icon`}
-            width={48}
-            height={48}
+            width={32}
+            height={32}
             quality={100}
           />
         ) : (
