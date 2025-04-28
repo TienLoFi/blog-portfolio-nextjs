@@ -40,7 +40,7 @@ export function NavDropdown({ className }: { className?: string }) {
             className="font-mono text-sm"
             asChild
           >
-            <NavLink href={link.href}>{link.title}</NavLink>
+            <NavLink href={link.href}>{link.key}</NavLink>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

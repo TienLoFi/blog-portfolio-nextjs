@@ -1,11 +1,13 @@
 import "@/styles/globals.css";
 
 import { Metadata, Viewport } from "next";
+import { cookies } from 'next/headers'; // Lấy cookies từ Next.js
 
 import { Providers } from "@/components/providers";
 import { META_THEME_COLORS, SITE_INFO } from "@/config/site";
 import { USER } from "@/data/user";
 import { fontMono, fontSans } from "@/lib/fonts";
+import { LanguageProvider } from "@/hooks/use-language";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_INFO.url),
@@ -73,14 +75,22 @@ export const viewport: Viewport = {
   themeColor: META_THEME_COLORS.light,
 };
 
+// Hàm lấy ngôn ngữ từ cookie
+function getUserLang() {
+  const langCookie = cookies().get('NEXT_LOCALE')?.value;
+  return langCookie || 'en'; // Mặc định là 'en' nếu không có cookie
+}
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const lang = getUserLang();
+
   return (
     <html
-      lang="en"
+      lang={lang}
       className={`${fontSans.variable} ${fontMono.variable}`}
       suppressHydrationWarning
     >
@@ -90,8 +100,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               try {
-                if (localStorage['chanhdai.theme'] === 'dark' || ((!('chanhdai.theme' in localStorage) || localStorage['chanhdai.theme'] === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                  document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}')
+                if (localStorage['chanhdai.theme'] === 'dark' ||
+                    ((!('chanhdai.theme' in localStorage) || localStorage['chanhdai.theme'] === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}');
                 }
               } catch (_) {}
             `,
@@ -100,7 +111,9 @@ export default function RootLayout({
       </head>
 
       <body>
-        <Providers>{children}</Providers>
+        <LanguageProvider>
+          <Providers>{children}</Providers>
+        </LanguageProvider>
       </body>
     </html>
   );

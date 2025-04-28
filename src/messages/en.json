@@ -3,26 +3,38 @@
     "home": "Home",
     "about": "About",
     "blog": "Blog",
-    "contact": "Contact"
+    "contact": "Contact",
+    "experience": "Experience",
+    "projects": "Projects",
+    "awards": "Awards",
+    "certs": "Certifications"
   },
   "common": {
     "loading": "Loading...",
     "error": "Error",
     "readMore": "Read More",
-    "back": "Back"
+    "back": "Back",
+    "home": "Home",
+    "blog": "Blog",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact",
+    "showMore": "Show more",
+    "showLess": "Show less"
   },
   "header": {
     "welcome": "Welcome to my portfolio",
     "hello": "Hello, World!",
     "im": "I'm",
-    "a": "a",
-    "juniorDeveloper": "{Junior Developer.}"
+    "a": "a"
   },
   "blog": {
     "title": "Blog",
     "backToBlog": "Back to Blog",
     "published": "Published on"
   },
+
+  "allPosts": "All Posts",
   "components": {
     "preview": "Preview",
     "code": "Code",
@@ -105,7 +117,7 @@
     "connect": "Connect with me on"
   },
   "techStack": {
-    "title": "Tech Stack",
+    "title": "Stack",
     "categories": {
       "language": "Language",
       "runtimeEnvironment": "Runtime Environment",
@@ -124,5 +136,35 @@
   },
   "welcome": "Welcome to my portfolio",
   "intro": "I am a passionate developer who loves to create beautiful and functional web applications.",
-  "displayName": "Chanh Dai"
+  "profile": {
+    "socialLinks": {
+      "title": "Find Me With Me",
+      "ariaLabel": "Social Links"
+    },
+    "about": {
+      "title": "About"
+    },
+    "skills": {
+      "title": "Skills"
+    },
+    "projects": {
+      "title": "Projects"
+    },
+    "awards": {
+      "title": "Awards"
+    },
+    "certifications": {
+      "title": "Certifications"
+    },
+    "experiences": {
+      "title": "Experiences"
+    }
+  },
+  "footer": {
+    "inspiredBy": "Inspired by chanhdai.com.",
+    "builtBy": "Built by",
+    "sourceCode": "The source code is available on",
+    "github": "GitHub"
+  },
+  "about": "Hello, I'm Hà Ngọc Tiến, a Developer with 1 year of experience in software development. I am proficient in front-end and back-end technologies such as React, JavaScript, Next.js, TypeScript, PHP, and Laravel. I am passionate about building efficient web products, optimizing user experience, and always ready to learn new technologies to improve my skills. My goal is to continuously develop my technical abilities and contribute to creative projects that deliver real value to users."
 }

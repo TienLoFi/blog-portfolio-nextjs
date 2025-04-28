@@ -1,7 +1,9 @@
+"use client";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import dayjs from "dayjs";
 
 import { CollapsibleList } from "@/components/collapsible-list";
+import { useTranslation } from "@/hooks/use-translation";
 
 import { AWARDS } from "../../data/awards";
 import { Panel, PanelHeader, PanelTitle } from "../panel";
@@ -12,10 +14,11 @@ const SORTED_AWARDS = [...AWARDS].sort((a, b) => {
 });
 
 export function Awards() {
+  const { t } = useTranslation();
   return (
     <Panel id="awards" className="scroll-mt-[4.75rem]">
       <PanelHeader>
-        <PanelTitle>Awards</PanelTitle>
+        <PanelTitle>{t("profile.awards.title")}</PanelTitle>
       </PanelHeader>
 
       <AccordionPrimitive.Root type="single" collapsible>

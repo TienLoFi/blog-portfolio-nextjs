@@ -1,35 +1,57 @@
-import { SOURCE_CODE_GITHUB_URL } from "@/config/site";
+"use client";
+
+import { Briefcase, Building2, Mail, MapPin, Phone } from "lucide-react";
+
 import { USER } from "@/data/user";
-import { urlToName } from "@/utils/url";
+import { useTranslation } from "@/hooks/use-translation";
 
 export function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="screen-line-before border-x border-grid pt-4 pb-[env(safe-area-inset-bottom,0px)]">
       <p className="mb-1 text-center font-mono text-sm text-balance text-muted-foreground">
-        Inspired by tailwindcss.com.
+        {t("footer.inspiredBy")}
       </p>
 
-      <p className="mb-4 text-center font-mono text-sm text-balance text-muted-foreground">
-        Built by{" "}
-        <a
-          className="link decoration-wavy"
-          href="https://linkedin.com/in/ncdai"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ncdai
-        </a>
-        . The source code is available on{" "}
-        <a
-          className="link decoration-wavy"
-          href={SOURCE_CODE_GITHUB_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-        .
-      </p>
+      <div className="screen-line-before grid grid-cols-1 gap-2 p-4 sm:grid-cols-2">
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center gap-2">
+            <MapPin className="h-4 w-4 text-muted-foreground" />
+            <span className="font-mono text-xs text-muted-foreground">
+              {USER.address}
+            </span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Mail className="h-4 w-4 text-muted-foreground" />
+            <span className="font-mono text-xs text-muted-foreground">
+              {(USER.email)}
+            </span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Phone className="h-4 w-4 text-muted-foreground" />
+            <span className="font-mono text-xs text-muted-foreground">
+              {USER.phoneNumber}
+            </span>
+          </div>
+        </div>
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center gap-2">
+            <Briefcase className="h-4 w-4 text-muted-foreground" />
+            <span className="font-mono text-xs text-muted-foreground">
+              {USER.jobTitle}
+            </span>
+          </div>
+          {USER.jobs.map((job) => (
+            <div key={job.company} className="flex items-center gap-2">
+              <Building2 className="h-4 w-4 text-muted-foreground" />
+              <span className="font-mono text-xs text-muted-foreground">
+                {job.title} at {job.company}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
 
       <div className="mb-5 flex justify-center">
         <a
@@ -53,7 +75,7 @@ export function Footer() {
           </svg>
         </a>
       </div>
-
+      {/*
       <div className="screen-line-before grid grid-cols-2 gap-1 p-4 sm:grid-cols-4">
         {USER.otherWebsites.map((website) => {
           return (
@@ -76,7 +98,7 @@ export function Footer() {
           //   </a>
           // );
         })}
-      </div>
+      </div> */}
 
       {/* <div
         className={cn(

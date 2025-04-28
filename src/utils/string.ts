@@ -1,12 +1,11 @@
 import { formatIncompletePhoneNumber } from "libphonenumber-js";
 
 export function decodeEmail(email: string) {
-  return atob(email);
-  // return email.replace(/\[at\]/g, "@").replace(/\[dot\]/g, ".");
+  return email.replace(/\s+\[at\]\s+/g, "@").replace(/\s+\[dot\]\s+/g, ".");
 }
 
 export function decodePhoneNumber(phone: string) {
-  return atob(phone);
+  return phone;
 }
 
 export function formatPhoneNumber(phone: string) {

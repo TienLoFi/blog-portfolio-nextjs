@@ -4,6 +4,7 @@ import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import Link from "next/link";
 
 import { ChanhDaiMark } from "@/components/chanhdai-mark";
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { NavItemGitHub } from "@/components/nav-item-github";
 import { ToggleTheme } from "@/components/toggle-theme";
 
@@ -32,6 +33,7 @@ export function StickyHeader() {
           <NavScrollspy className="max-sm:hidden" />
 
           <div className="flex items-center gap-2">
+            <LanguageSwitcher />
             <NavItemGitHub />
             <ToggleTheme />
             <NavDropdown className="sm:hidden" />
