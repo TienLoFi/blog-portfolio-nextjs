@@ -13,10 +13,10 @@ import { Blog } from "@/features/profile/components/blog";
 import { Certifications } from "@/features/profile/components/certifications";
 import { Experiences } from "@/features/profile/components/experiences";
 import { Header } from "@/features/profile/components/header";
-import { Overview } from "@/features/profile/components/overview";
+// import { Overview } from "@/features/profile/components/overview";
 import { Projects } from "@/features/profile/components/projects";
 import { QuickActions } from "@/features/profile/components/quick-actions";
-import { SocialLinks } from "@/features/profile/components/social-links";
+// import { SocialLinks } from "@/features/profile/components/social-links";
 import { StickyHeader } from "@/features/profile/components/sticky-header";
 import { TeckStack } from "@/features/profile/components/teck-stack";
 import { cn } from "@/lib/cn";
@@ -67,11 +67,11 @@ export default function Page() {
           <Pattern />
 
           <main>
-            <Overview />
-            <Pattern />
+            {/* <Overview />
+            <Pattern /> */}
 
-            <SocialLinks />
-            <Pattern />
+            {/* <SocialLinks /> */}
+            {/* <Pattern /> */}
 
             <About />
             <Pattern />

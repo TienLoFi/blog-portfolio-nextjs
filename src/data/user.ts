@@ -1,8 +1,8 @@
 export const USER = {
-  firstName: "Chánh Đại",
-  lastName: "Nguyễn",
-  displayName: "Chánh Đại",
-  username: "ncdai",
+  firstName: "Ngọc Tiến",
+  lastName: "Hà",
+  displayName: "Ngọc Tiến",
+  username: "tienlofi",
   gender: "male",
   bio: "Creating with code, driven by passion.",
   flipSentences: [
@@ -43,14 +43,19 @@ export const USER = {
     },
   ],
   about: `
-Hello, World! I am Chánh Đại, a Software Developer & UI/UX Designer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs.\n
-With 5+ years of experience, I specialize in building high-quality web and mobile applications using Next.js, React, TypeScript, and modern front-end technologies. Beyond work, I love exploring new technologies and turning ideas into reality through personal projects.\n
-One of my key projects, [ZaDark](https://zadark.com), enhances the Zalo experience on PC and Web, surpassing 80,000 downloads on [SourceForge](https://sourceforge.net/projects/zadark) and 10,000 active users on the [Chrome Web Store](https://chromewebstore.google.com/detail/llfhpkkeljlgnjgkholeppfnepmjppob) since 2022.\n
-Let's connect and collaborate!
-  `,
-  avatar: "/images/chanhdai-avatar-ghibli.jpeg",
+Xin chào, tôi là Hà Ngọc Tiến, một Lập trình viên với 1 năm kinh nghiệm trong lĩnh vực phát triển phần mềm. Tôi thành thạo các công nghệ front-end và back-end như React, JavaScript, Next.js, TypeScript, PHP và Laravel.
+Tôi đam mê xây dựng những sản phẩm web hiệu quả, tối ưu trải nghiệm người dùng và luôn sẵn sàng học hỏi công nghệ mới để nâng cao kỹ năng. Mục tiêu của tôi là không ngừng phát triển năng lực kỹ thuật và đóng góp vào những dự án sáng tạo, mang lại giá trị thực cho người dùng.`,
+  avatar: "/images/ngoctien_avatar_ghibli.png",
   ogImage: "/images/chanhdai-og-image.png?v=250420",
   keywords:
     "ncdai, nguyenchanhdai, nguyen chanh dai, chanhdai, chanh dai, iamncdai, quaric, zadark, nguyễn chánh đại, chánh đại",
   dateCreated: "2023-10-20", // YYYY-MM-DD
+  intro: `
+  Là một kỹ sư phần mềm, tôi luôn đam mê học hỏi các công nghệ mới
+  và tận dụng chúng để xây dựng những website thân thiện với người
+  dùng, mang lại trải nghiệm tối ưu và hiệu quả.
+  `,
+  welcome: `
+  Chào mừng đến với hồ sơ của tôi
+  `,
 };
