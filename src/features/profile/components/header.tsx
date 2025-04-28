@@ -43,7 +43,7 @@ export function Header() {
                 {"{Junior Developer.}"}
               </span>
             </h2>
-            <Prose className="text-zinc-950 dark:text-zinc-50">
+            <Prose className="mt-8 text-zinc-950 dark:text-zinc-50">
               <Markdown>{USER.intro}</Markdown>
             </Prose>
           </div>
