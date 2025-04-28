@@ -1,0 +1,128 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "readMore": "Read More",
+    "back": "Back"
+  },
+  "header": {
+    "welcome": "Welcome to my portfolio",
+    "hello": "Hello, World!",
+    "im": "I'm",
+    "a": "a",
+    "juniorDeveloper": "{Junior Developer.}"
+  },
+  "blog": {
+    "title": "Blog",
+    "backToBlog": "Back to Blog",
+    "published": "Published on"
+  },
+  "components": {
+    "preview": "Preview",
+    "code": "Code",
+    "installation": "Installation",
+    "usage": "Usage",
+    "props": "Props",
+    "references": "References",
+    "acknowledgments": "Acknowledgments"
+  },
+  "user": {
+    "bio": "Creating with code, driven by passion.",
+    "jobTitle": "Software Developer & UI/UX Designer",
+    "address": "Ho Chi Minh City, Viet Nam",
+    "flipSentences": {
+      "softwareDeveloper": "Software Developer",
+      "uiUxDesigner": "UI/UX Designer",
+      "openSourceContributor": "Open Source Contributor"
+    }
+  },
+  "awards": {
+    "title": "Awards",
+    "prize": "Prize",
+    "date": "Date",
+    "grade": "Grade",
+    "description": "Description",
+    "field": "Field",
+    "project": "Project",
+    "organizedIn": "Organized in",
+    "subject": "Subject",
+    "programmingLanguage": "Programming Language",
+    "completed": "Completed",
+    "within": "within",
+    "hours": "hours",
+    "youngestTeam": "Youngest competing team to win an award"
+  },
+  "certifications": {
+    "title": "Certifications",
+    "issuer": "Issuer",
+    "issueDate": "Issue Date",
+    "credentialID": "Credential ID",
+    "credentialURL": "Credential URL"
+  },
+  "experiences": {
+    "title": "Experiences",
+    "employmentType": {
+      "fullTime": "Full-time",
+      "partTime": "Part-time"
+    },
+    "current": "Present",
+    "description": "Description",
+    "skills": "Skills",
+    "education": {
+      "title": "Education",
+      "currentlyStudying": "Currently studying for a Bachelor's degree in",
+      "languageProficiency": "Language Proficiency",
+      "achievedAwards": "Achieved several awards",
+      "outstandingStudent": "Outstanding Student",
+      "developedFeature": "Developed a feature",
+      "developedWebsites": "Developed websites",
+      "builtWebsites": "Built websites"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "time": "Time",
+    "tags": "Tags",
+    "description": "Description",
+    "sourceCode": "Source Code",
+    "server": "Server",
+    "client": "Client",
+    "course": "Course",
+    "projectScore": "Project Score",
+    "requirement": "Requirement",
+    "features": "Features",
+    "specialFeature": "Special Feature",
+    "functions": "Functions"
+  },
+  "social": {
+    "title": "Social Links",
+    "connect": "Connect with me on"
+  },
+  "techStack": {
+    "title": "Tech Stack",
+    "categories": {
+      "language": "Language",
+      "runtimeEnvironment": "Runtime Environment",
+      "library": "Library",
+      "uiLibrary": "UI Library",
+      "framework": "Framework",
+      "stateManagement": "State Management",
+      "navigation": "Navigation",
+      "versionControl": "Version Control",
+      "containerization": "Containerization",
+      "database": "Database",
+      "tools": "Tools",
+      "design": "Design",
+      "ai": "AI"
+    }
+  },
+  "welcome": "Welcome to my portfolio",
+  "intro": "I am a passionate developer who loves to create beautiful and functional web applications.",
+  "displayName": "Chanh Dai"
+}

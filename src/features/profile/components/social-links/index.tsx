@@ -11,7 +11,7 @@ export function SocialLinks() {
         <PanelTitle>Find My With Me</PanelTitle>
       </PanelHeader>
       <h2 className="sr-only">Social Links</h2>
-      <div className="flex flex-wrap justify-center gap-4 py-2">
+      <div className="flex flex-wrap justify-center gap-2 py-1">
         {SOCIAL_LINKS.map((link, index) => (
           <SocialLinkItem key={index} {...link} />
         ))}
