@@ -14,33 +14,15 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Language"],
   },
   {
-    key: "python",
-    title: "Python",
-    href: "https://www.python.org/",
-    categories: ["Language"],
-  },
-  {
     key: "php",
     title: "PHP",
     href: "https://www.php.net/",
     categories: ["Language"],
   },
   {
-    key: "java",
-    title: "Java",
-    href: "https://www.java.com/",
-    categories: ["Language"],
-  },
-  {
     key: "nodejs",
     title: "Node.js",
     href: "https://nodejs.org/",
-    categories: ["Runtime Environment"],
-  },
-  {
-    key: "bun",
-    title: "Bun",
-    href: "https://bun.sh/",
     categories: ["Runtime Environment"],
   },
   {
@@ -61,32 +43,6 @@ export const TECH_STACK: TechStack[] = [
     title: "Tailwind CSS",
     href: "https://tailwindcss.com/",
     categories: ["Framework"],
-  },
-  {
-    key: "shadcn-ui",
-    title: "shadcn/ui",
-    href: "https://ui.shadcn.com/",
-    categories: ["Library", "Component Library"],
-    theme: true,
-  },
-  {
-    key: "radixui",
-    title: "Radix UI",
-    href: "https://www.radix-ui.com/",
-    categories: ["Library", "Component Library"],
-    theme: true,
-  },
-  {
-    key: "motion",
-    title: "Motion",
-    href: "https://motion.dev/",
-    categories: ["Library", "Animation"],
-  },
-  {
-    key: "mobx-state-tree",
-    title: "MobX-State-Tree",
-    href: "https://mobx-state-tree.js.org/",
-    categories: ["State Management"],
   },
   {
     key: "redux",
@@ -111,12 +67,6 @@ export const TECH_STACK: TechStack[] = [
     title: "React Navigation",
     href: "https://reactnavigation.org/",
     categories: ["Library", "Navigation"],
-  },
-  {
-    key: "loopback",
-    title: "LoopBack",
-    href: "https://loopback.io/",
-    categories: ["Framework"],
   },
   {
     key: "laravel",
@@ -148,12 +98,7 @@ export const TECH_STACK: TechStack[] = [
     href: "https://www.mongodb.com/",
     categories: ["Database"],
   },
-  {
-    key: "redis",
-    title: "Redis",
-    href: "https://redis.io/",
-    categories: ["Database"],
-  },
+
   {
     key: "figma",
     title: "Figma",
@@ -173,10 +118,4 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Tools", "AI"],
     theme: true,
   },
-  // {
-  //   key: "zalo-mini-app",
-  //   title: "Zalo Mini App",
-  //   href: "https://mini.zalo.me/",
-  //   categories: ["Other"],
-  // },
 ];
