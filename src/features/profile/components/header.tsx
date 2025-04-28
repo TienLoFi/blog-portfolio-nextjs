@@ -79,7 +79,6 @@ export function Header() {
           </div>
         </div>
       </div>
-
       <SocialLinks />
     </header>
   );
