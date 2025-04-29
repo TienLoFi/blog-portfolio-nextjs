@@ -5,6 +5,7 @@ import React from "react";
 
 import { Markdown } from "@/components/markdown";
 import { Prose } from "@/components/ui/typography";
+import { useTranslation } from "@/hooks/use-translation";
 import { cn } from "@/lib/cn";
 
 import { Award } from "../../types/awards";
@@ -16,7 +17,16 @@ export function AwardItem({
   className?: string;
   award: Award;
 }) {
+  const { t } = useTranslation();
   const canExpand = Boolean(award?.description);
+
+  const description = React.useMemo(() => {
+    // Kiểm tra nếu description là một translation key
+    if (award.description?.startsWith("awards.description.")) {
+      return t(award.description);
+    }
+    return award.description;
+  }, [award.description, t]);
 
   return (
     <AccordionPrimitive.Item value={award.id} disabled={!canExpand} asChild>
@@ -50,9 +60,9 @@ export function AwardItem({
 
           {canExpand && (
             <AccordionPrimitive.Content className="overflow-hidden transition-all duration-300 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-              {award?.description && (
+              {description && (
                 <Prose className="px-2 pb-4">
-                  <Markdown>{award.description}</Markdown>
+                  <Markdown>{description}</Markdown>
                 </Prose>
               )}
             </AccordionPrimitive.Content>
