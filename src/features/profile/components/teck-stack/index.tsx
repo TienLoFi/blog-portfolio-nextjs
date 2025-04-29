@@ -1,15 +1,19 @@
+"use client";
+
 import React from "react";
 
+import { useTranslation } from "@/hooks/use-translation";
 import { cn } from "@/lib/cn";
 
 import { Panel, PanelContent, PanelHeader, PanelTitle } from "../panel";
 import { TeckStackContent } from "./teck-stack-content";
 
 export function TeckStack() {
+  const { t } = useTranslation();
   return (
     <Panel>
       <PanelHeader>
-        <PanelTitle>Skill</PanelTitle>
+        <PanelTitle>{t("techStack.title")}</PanelTitle>
       </PanelHeader>
 
       <PanelContent

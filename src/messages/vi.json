@@ -3,13 +3,24 @@
     "home": "Trang chủ",
     "about": "Giới thiệu",
     "blog": "Blog",
-    "contact": "Liên hệ"
+    "contact": "Liên hệ",
+    "experience": "Kinh nghiệm",
+    "projects": "Dự án",
+    "awards": "Giải thưởng",
+    "certs": "Chứng chỉ"
   },
   "common": {
     "loading": "Đang tải...",
     "error": "Lỗi",
     "readMore": "Đọc thêm",
-    "back": "Quay lại"
+    "back": "Quay lại",
+    "home": "Trang chủ",
+    "blog": "Blog",
+    "projects": "Dự án",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ",
+    "showMore": "Xem thêm",
+    "showLess": "Thu gọn"
   },
   "header": {
     "welcome": "Chào mừng đến với portfolio của tôi",
@@ -124,5 +135,44 @@
   },
   "welcome": "Chào mừng đến với portfolio của tôi",
   "intro": "Tôi là một developer đam mê với việc tạo ra những ứng dụng web đẹp và chức năng.",
-  "displayName": "Chanh Đại"
+  "profile": {
+    "socialLinks": {
+      "title": "Liên Hệ Với Tôi",
+      "ariaLabel": "Liên kết mạng xã hội"
+    },
+    "about": {
+      "title": "Giới thiệu"
+
+    },
+
+    "skills": {
+      "title": "Kỹ năng"
+    },
+    "projects": {
+      "title": "Dự án"
+    },
+    "awards": {
+      "title": "Giải thưởng"
+    },
+    "certifications": {
+      "title": "Chứng chỉ"
+    },
+    "experiences": {
+      "title": "Kinh nghiệm"
+    },
+    "techStack": {
+      "title": "Công nghệ"
+    }
+  },
+  "allPosts": "Tất cả bài viết",
+  "footer": {
+    "inspiredBy": "Lấy cảm hứng từ tailwindcss.com.",
+    "builtBy": "Xây dựng bởi",
+    "sourceCode": "Mã nguồn có sẵn trên",
+    "github": "GitHub"
+  },
+
+    "about": "Xin chào, tôi là Hà Ngọc Tiến, một Lập trình viên với 1 năm kinh nghiệm trong lĩnh vực phát triển phần mềm. Tôi thành thạo các công nghệ front-end và back-end như React, JavaScript, Next.js, TypeScript, PHP và Laravel. Tôi đam mê xây dựng những sản phẩm web hiệu quả, tối ưu trải nghiệm người dùng và luôn sẵn sàng học hỏi công nghệ mới để nâng cao kỹ năng. Mục tiêu của tôi là không ngừng phát triển năng lực kỹ thuật và đóng góp vào những dự án sáng tạo, mang lại giá trị thực cho người dùng."
+
+
 }

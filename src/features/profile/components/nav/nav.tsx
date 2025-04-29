@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 
+import { useTranslation } from "@/hooks/use-translation"; // thêm import useTranslation
 import { cn } from "@/lib/cn";
 
 import { NAV_LINKS } from "../../config/nav";
@@ -12,6 +15,8 @@ export function Nav({
   className?: string;
   activeId?: string | null;
 }) {
+  const { t } = useTranslation(); // lấy hook dịch ngôn ngữ
+
   return (
     <nav
       className={cn(
@@ -19,13 +24,13 @@ export function Nav({
         className
       )}
     >
-      {NAV_LINKS.map(({ title, href }) => {
+      {NAV_LINKS.map(({ key, href }) => {
         const itemId = href?.split("#")[1] ?? "";
         const active = itemId === activeId;
 
         return (
           <NavItem key={href} href={href} active={active}>
-            {title}
+            {t(`navigation.${key}`)} {/* dịch dựa theo key */}
           </NavItem>
         );
       })}

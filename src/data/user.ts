@@ -10,30 +10,17 @@ export const USER = {
     "UI/UX Designer",
     "Open Source Contributor",
   ],
-  address: "Ho Chi Minh City, Viet Nam",
-  phoneNumber: "Kzg0Nzc3ODg4MTQ4", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
-  email: "ZGFpQGNoYW5oZGFpLmNvbQ==", // base64 encoded
-  // email: "dai[at]chanhdai[dot]com",
-  website: "https://chanhdai.com",
-  otherWebsites: [
-    "https://dai.ng",
-    "https://dai.so",
-    "https://d.io.vn",
-    "https://d.id.vn",
-    "https://dai.io.vn",
-    "https://dai.id.vn",
-    "https://chanhdai.io.vn",
-    "https://chanhdai.id.vn",
-    "https://ncdai.vn",
-    "https://ncdai.net",
-    "https://dai.is-a.dev",
-  ],
-  dateOfBirth: "2000-08-14", // YYYY-MM-DD
-  jobTitle: "Software Developer & UI/UX Designer",
+  address: "Thu Duc, Ho Chi Minh City, Viet Nam",
+  phoneNumber: "+84" + "369" + "864" + "072", // E.164 format
+  email: "ngoctien9940" + "@" + "gmail" + "." + "com",
+  website: "https://ngoctien.com",
+
+  dateOfBirth: "2003-01-10", // YYYY-MM-DD
+  jobTitle: "Software Developer",
   jobs: [
     {
-      title: "Senior Frontend Developer & UI Design Lead",
-      company: "Simplamo",
+      title: "Junior Full Stack Developer",
+      company: "Pascal Group",
       website: "https://simplamo.com?ref=IN-926722",
     },
     {
