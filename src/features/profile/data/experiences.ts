@@ -2,8 +2,8 @@ import { Experience } from "../types/experiences";
 
 export const EXPERIENCES: Experience[] = [
   {
-    company: "Simplamo Enterprise JSC",
-    companyLogo: "/images/companies/simplamo.webp",
+    company: "Pascal Group",
+    companyLogo: "/images/companies/pascalgroup-logo.webp",
     positions: [
       // {
       //   id: "76ce1cbc-7a20-40a5-818c-8334bcefbd83",
@@ -22,12 +22,12 @@ export const EXPERIENCES: Experience[] = [
       // },
       {
         id: "20f8bfe5-b6a3-4b0d-ac2f-6fccd50d417e",
-        title: "Senior Frontend Developer",
-        year: "10.2022 - present",
+        title: "Junior Full-Stack Developer",
+        year: "01.2025 - 05.2025",
         employmentType: "Full-time",
         icon: "code",
         description:
-          "- Develop [AI Chat](https://help.simplamo.com/features/simplamo-ai/ai-chat/guide_simplamo_ai_chat?ref=IN-926722) and [AI Assistant](https://help.simplamo.com/features/simplamo-ai/ai-expert/aiexpert-rockdiscribe?ref=IN-926722) features.\n- Develop [Whiteboards](https://help.simplamo.com/features/whiteboard/overview?ref=IN-926722) with real-time collaboration.\n- Build and maintain the [Zalo Mini App](https://zalo.me/s/1736112917405511258/) for Simplamo with seamless integration.\n- Develop and maintain core features to enhance functionality and user experience.\n- Ensure UI/UX consistency and adherence to standards.\n- Implement robust frontend solutions for web and mobile platforms.\n- Analyze technical capabilities and provide optimal solutions.",
+          "Develop and maintain the Affiliate Marketing Tool module for [Fimi's CRM system](https://backend.fimi.tech), including Campaigns, Programs, Product Categories, and Publishers.\n- Design and implement features to manage marketing campaigns with configurable budgets, durations, and performance metrics.\n- Build program management capabilities to group and coordinate multiple campaigns.\n- Create and manage product categories linked to each campaign for targeted tracking.\n- Develop publisher onboarding, role management, performance tracking, and commission handling.\n- Integrate real-time reporting dashboards for clicks, conversions, and revenue.\n- Technologies used: PHP Laravel, MySQL, RESTful API, Blade Templates, Laravel Auth & Middleware",
         skills: [
           "TypeScript",
           "Next.js",
