@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
 import { Briefcase, Building2, Mail, MapPin, Phone } from "lucide-react";
 
 import { USER } from "@/data/user";
@@ -7,6 +8,15 @@ import { useTranslation } from "@/hooks/use-translation";
 
 export function Footer() {
   const { t } = useTranslation();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <footer className="screen-line-before border-x border-grid pt-4 pb-[env(safe-area-inset-bottom,0px)]">
@@ -25,7 +35,7 @@ export function Footer() {
           <div className="flex items-center gap-2">
             <Mail className="h-4 w-4 text-muted-foreground" />
             <span className="font-mono text-xs text-muted-foreground">
-              {(USER.email)}
+              {USER.email}
             </span>
           </div>
           <div className="flex items-center gap-2">
@@ -75,43 +85,6 @@ export function Footer() {
           </svg>
         </a>
       </div>
-      {/*
-      <div className="screen-line-before grid grid-cols-2 gap-1 p-4 sm:grid-cols-4">
-        {USER.otherWebsites.map((website) => {
-          return (
-            <span
-              key={website}
-              className="font-mono text-xs text-muted-foreground"
-            >
-              {urlToName(website)}
-            </span>
-          );
-          // return (
-          //   <a
-          //     key={website}
-          //     className="font-mono text-xs text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
-          //     href={website}
-          //     target="_blank"
-          //     rel="noopener noreferrer"
-          //   >
-          //     {urlToName(website)}
-          //   </a>
-          // );
-        })}
-      </div> */}
-
-      {/* <div
-        className={cn(
-          "screen-line-before",
-          "[--pattern-foreground:var(--color-black)]/1 dark:[--pattern-foreground:var(--color-white)]/1",
-          "bg-[image:repeating-linear-gradient(0deg,_var(--pattern-foreground)_0,_var(--pattern-foreground)_1px,_transparent_0,_transparent_10px),repeating-linear-gradient(90deg,_var(--pattern-foreground)_0,_var(--pattern-foreground)_1px,_transparent_0,_transparent_10px)]",
-          "bg-[size:10px_10px] bg-[position:-1px_1px]"
-        )}
-      >
-        <div className="-mx-px py-4">
-          <WordmarkHoverEffect />
-        </div>
-      </div> */}
     </footer>
   );
 }

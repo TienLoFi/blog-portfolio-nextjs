@@ -3,14 +3,20 @@
 import { useLanguage } from "@/hooks/use-language";
 import enMessages from "@/messages/en.json";
 import viMessages from "@/messages/vi.json";
+import { useMemo } from "react";
 
 type Messages = typeof enMessages;
 
 export function useTranslation() {
   const { language } = useLanguage();
-  const messages: Messages = language === "en" ? enMessages : viMessages;
+  const messages: Messages = useMemo(
+    () => (language === "en" ? enMessages : viMessages),
+    [language]
+  );
 
   const t = (key: string) => {
+    if (!key) return "";
+
     const keys = key.split(".");
     let value: Record<string, unknown> | string = messages;
 
@@ -25,5 +31,5 @@ export function useTranslation() {
     return (value as string) || key;
   };
 
-  return { t, language };
+  return useMemo(() => ({ t, language }), [language, messages]);
 }

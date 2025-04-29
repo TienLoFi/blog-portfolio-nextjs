@@ -1,13 +1,13 @@
 import "@/styles/globals.css";
 
 import { Metadata, Viewport } from "next";
-import { cookies } from 'next/headers'; // Lấy cookies từ Next.js
+import { cookies } from "next/headers"; // Lấy cookies từ Next.js
 
 import { Providers } from "@/components/providers";
 import { META_THEME_COLORS, SITE_INFO } from "@/config/site";
 import { USER } from "@/data/user";
-import { fontMono, fontSans } from "@/lib/fonts";
 import { LanguageProvider } from "@/hooks/use-language";
+import { fontMono, fontSans } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_INFO.url),
@@ -77,8 +77,8 @@ export const viewport: Viewport = {
 
 // Hàm lấy ngôn ngữ từ cookie
 function getUserLang() {
-  const langCookie = cookies().get('NEXT_LOCALE')?.value;
-  return langCookie || 'en'; // Mặc định là 'en' nếu không có cookie
+  const langCookie = cookies().get("NEXT_LOCALE")?.value;
+  return langCookie || "en"; // Mặc định là 'en' nếu không có cookie
 }
 
 export default function RootLayout({
