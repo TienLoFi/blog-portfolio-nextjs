@@ -58,7 +58,6 @@
     "prize": "Giải thưởng",
     "date": "Ngày",
     "grade": "Lớp",
-    "description": "Mô tả",
     "field": "Lĩnh vực",
     "project": "Dự án",
     "organizedIn": "Tổ chức tại",
@@ -67,7 +66,11 @@
     "completed": "Hoàn thành",
     "within": "trong vòng",
     "hours": "giờ",
-    "youngestTeam": "Đội thi trẻ tuổi nhất giành giải"
+    "youngestTeam": "Đội thi trẻ tuổi nhất giành giải",
+
+    "description": {
+      "hcmc-excellent-student-2024": "Top 7 cuộc thi Học sinh Giỏi Thiết kế Web TP. Hồ Chí Minh 2024.\n- Thiết kế và phát triển website chủ đề “Sông Sài Gòn – Con sông của thành phố tôi”, giới thiệu lịch sử, vai trò và vẻ đẹp của dòng sông gắn liền với sự phát triển của TP.HCM.\n- Sử dụng HTML, CSS, JavaScript để xây dựng giao diện thân thiện, tương thích đa thiết bị.\n- Tối ưu nội dung, hình ảnh và bố cục giúp truyền tải thông điệp văn hóa – địa lý một cách trực quan.\n- Đạt vị trí Top 7 toàn thành phố với đánh giá cao từ ban giám khảo về nội dung và trải nghiệm người dùng.."
+    }
   },
   "certifications": {
     "title": "Chứng chỉ",
@@ -87,13 +90,19 @@
     "skills": "Kỹ năng",
     "education": {
       "title": "Học vấn",
-      "currentlyStudying": "Đang theo học chương trình Cử nhân ngành",
+      "currentlyStudying": "Đang theo học Cử nhân ngành",
       "languageProficiency": "Trình độ ngoại ngữ",
       "achievedAwards": "Đạt được nhiều giải thưởng",
-      "outstandingStudent": "Học sinh giỏi",
+      "outstandingStudent": "Học sinh Giỏi",
       "developedFeature": "Phát triển tính năng",
-      "developedWebsites": "Phát triển các website",
-      "builtWebsites": "Xây dựng các website"
+      "developedWebsites": "Phát triển các trang web",
+      "builtWebsites": "Xây dựng các trang web"
+    },
+    "descriptions": {
+      "cedd7adb-4118-4085-9983-ae00530b49e2": "Phát triển và duy trì [Ứng dụng Web Di động Thẻ tín dụng VPBank](https://cards.fimi.tech) cho đăng ký thẻ tín dụng trực tuyến.\n- Hợp tác trong nhóm 2 thành viên để triển khai đầy đủ tính năng từ frontend đến backend.\n- Thiết kế và phát triển frontend sử dụng ReactJS với React Hooks, Context API và functional components để tạo trải nghiệm người dùng mượt mà.\n- Xây dựng và tích hợp backend sử dụng PHP (Laravel), đảm bảo tính ổn định và khả năng mở rộng của API.\n- Xử lý giao tiếp HTTP sử dụng Guzzle để kết nối với các dịch vụ bên ngoài.\n- Tích hợp AWS S3 để lưu trữ file an toàn và có khả năng mở rộng (tài liệu eKYC, hình ảnh CMND).\n- Tham gia sửa lỗi, tối ưu hóa UI và cải thiện hiệu suất trên các giao diện web di động.\n- Công nghệ sử dụng: ReactJS, Context API, Laravel, Guzzle, AWS S3.",
+      "20f8bfe5-b6a3-4b0d-ac2f-6fccd50d417e": "Phát triển và duy trì module Công cụ Tiếp thị Liên kết cho [Hệ thống CRM của Fimi](https://backend.fimi.tech), bao gồm Chiến dịch, Chương trình, Danh mục Sản phẩm và Nhà phát hành.\n- Thiết kế và triển khai các tính năng để quản lý chiến dịch tiếp thị với ngân sách, thời hạn và chỉ số hiệu suất có thể cấu hình.\n- Xây dựng khả năng quản lý chương trình để nhóm và điều phối nhiều chiến dịch.\n- Tạo và quản lý danh mục sản phẩm liên kết với từng chiến dịch để theo dõi mục tiêu.\n- Phát triển quy trình tham gia của nhà phát hành, quản lý vai trò, theo dõi hiệu suất và xử lý hoa hồng.\n- Tích hợp bảng điều khiển báo cáo thời gian thực cho lượt nhấp chuột, chuyển đổi và doanh thu.\n- Công nghệ sử dụng: PHP Laravel, MySQL, RESTful API, Blade Templates, Laravel Auth & Middleware",
+      "cedd7adb-4118-4085-9983-ae00530b49e3": "Tham gia phát triển [ZUDO App](https://zudo.vn) trong giai đoạn thực tập, ứng dụng kết nối nhiều nền tảng thương mại điện tử trên một giao diện desktop thống nhất.\n- Hợp tác cùng nhóm 3 thành viên để triển khai các tính năng cả frontend và backend.\n- Phát triển giao diện người dùng thân thiện với thiết bị di động sử dụng Flutter (Dart), hỗ trợ đa nền tảng.\n- Xây dựng và duy trì backend bằng PHP (Laravel) xử lý logic nghiệp vụ và dịch vụ API.\n- Tích hợp AWS S3 để lưu trữ tệp và hình ảnh từ nhiều nền tảng khác nhau.\n- Tham gia xử lý lỗi, kiểm thử và hoàn thiện tính năng để đảm bảo sản phẩm ổn định.\n- Công nghệ sử dụng: Flutter (Dart), Laravel, AWS S3.",
+      "20f8bfe5-b6a3-4b0d-ac2f-6fccd50d417t": "Kết hợp cùng team công ty [Hitech](https://hitech-vn.com/) để hoàn thiện [ZUDO Desktop App](https://app.zudo.vn/) trong giai đoạn tháng 3 đến tháng 5-2025.\n- Viết và tích hợp các RESTful API cho các chức năng chính như đơn hàng, tồn kho, tài khoản người dùng.\n- Hoàn thiện giao diện người dùng bằng Flutter, tối ưu trải nghiệm trên desktop.\n- Xây dựng và hoàn thiện backend sử dụng Laravel, kết nối cơ sở dữ liệu và xử lý nghiệp vụ.\n- Tối ưu hiệu năng hệ thống, xử lý lỗi và kiểm thử toàn bộ quy trình nghiệp vụ.\n- Tích hợp quản lý và upload hình ảnh, tài liệu thông qua AWS S3.\n- Tham gia họp kỹ thuật, trao đổi giải pháp với team Hitech theo quy trình agile.\n- Công nghệ sử dụng: Flutter (Dart), Laravel, MySQL, RESTful API, AWS S3."
     }
   },
   "projects": {
@@ -134,7 +143,7 @@
     }
   },
   "welcome": "Chào mừng đến với portfolio của tôi",
-  "intro": "Tôi là một developer đam mê với việc tạo ra những ứng dụng web đẹp và chức năng.",
+  "intro": "Tôi là một Junior Fullstack Developer với thế mạnh về backend, đam mê xây dựng các ứng dụng web có kiến trúc rõ ràng, chức năng mạnh mẽ và hiệu suất cao. Luôn nỗ lực học hỏi công nghệ mới để hoàn thiện kỹ năng và đóng góp hiệu quả cho dự án.",
   "profile": {
     "socialLinks": {
       "title": "Liên Hệ Với Tôi",
@@ -142,9 +151,7 @@
     },
     "about": {
       "title": "Giới thiệu"
-
     },
-
     "skills": {
       "title": "Kỹ năng"
     },
@@ -166,13 +173,10 @@
   },
   "allPosts": "Tất cả bài viết",
   "footer": {
-    "inspiredBy": "Lấy cảm hứng từ tailwindcss.com.",
+    "inspiredBy": "Lấy cảm hứng từ chanhdai.com.",
     "builtBy": "Xây dựng bởi",
     "sourceCode": "Mã nguồn có sẵn trên",
     "github": "GitHub"
   },
-
-    "about": "Xin chào, tôi là Hà Ngọc Tiến, một Lập trình viên với 1 năm kinh nghiệm trong lĩnh vực phát triển phần mềm. Tôi thành thạo các công nghệ front-end và back-end như React, JavaScript, Next.js, TypeScript, PHP và Laravel. Tôi đam mê xây dựng những sản phẩm web hiệu quả, tối ưu trải nghiệm người dùng và luôn sẵn sàng học hỏi công nghệ mới để nâng cao kỹ năng. Mục tiêu của tôi là không ngừng phát triển năng lực kỹ thuật và đóng góp vào những dự án sáng tạo, mang lại giá trị thực cho người dùng."
-
-
+  "about": "Xin chào, tôi là Hà Ngọc Tiến, một Lập trình viên với 1 năm kinh nghiệm trong lĩnh vực phát triển phần mềm. Tôi thành thạo các công nghệ front-end và back-end như React, JavaScript, Next.js, TypeScript, PHP và Laravel. Tôi đam mê xây dựng những sản phẩm web hiệu quả, tối ưu trải nghiệm người dùng và luôn sẵn sàng học hỏi công nghệ mới để nâng cao kỹ năng. Mục tiêu của tôi là không ngừng phát triển năng lực kỹ thuật và đóng góp vào những dự án sáng tạo, mang lại giá trị thực cho người dùng."
 }

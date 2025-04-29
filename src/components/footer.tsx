@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
 import { Briefcase, Building2, Mail, MapPin, Phone } from "lucide-react";
+import React, { useEffect, useState } from "react";
 
 import { USER } from "@/data/user";
 import { useTranslation } from "@/hooks/use-translation";

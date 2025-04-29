@@ -5,6 +5,7 @@ import React from "react";
 import { Markdown } from "@/components/markdown";
 import { Tag } from "@/components/ui/tag";
 import { Prose } from "@/components/ui/typography";
+import { useTranslation } from "@/hooks/use-translation";
 
 import { ExperiencePosition } from "../../types/experiences";
 import { ExperienceIcon } from "./experience-position-icon";
@@ -14,6 +15,24 @@ export function ExperiencePositionItem({
 }: {
   position: ExperiencePosition;
 }) {
+  const { t } = useTranslation();
+
+  const description = React.useMemo(() => {
+    // Kiểm tra nếu description là một translation key
+    if (position.description?.startsWith("experiences.descriptions.")) {
+      return t(position.description);
+    }
+    return position.description;
+  }, [position.description, t]);
+
+  const employmentType = React.useMemo(() => {
+    // Kiểm tra nếu employmentType là một translation key
+    if (position.employmentType?.startsWith("experiences.employmentType.")) {
+      return t(position.employmentType);
+    }
+    return position.employmentType;
+  }, [position.employmentType, t]);
+
   return (
     <AccordionPrimitive.Item value={position.id} asChild>
       <div className="relative last:before:absolute last:before:h-full last:before:w-4 last:before:bg-background">
@@ -31,9 +50,9 @@ export function ExperiencePositionItem({
           </div>
 
           <p className="flex items-center gap-2 pl-9 font-mono text-xs text-muted-foreground">
-            {position.employmentType && (
+            {employmentType && (
               <>
-                <span>{position.employmentType}</span>
+                <span>{employmentType}</span>
                 <span className="flex h-4 w-px shrink-0 bg-border" />
               </>
             )}
@@ -43,11 +62,13 @@ export function ExperiencePositionItem({
         </AccordionPrimitive.Trigger>
 
         <AccordionPrimitive.Content className="overflow-hidden transition-all duration-300 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-          {position?.description && (
-            <Prose className="pt-2 pl-9">
-              <Markdown>{position?.description}</Markdown>
-            </Prose>
-          )}
+          <Prose className="pt-2 pl-9">
+            {description ? (
+              <Markdown>{description}</Markdown>
+            ) : (
+              <p className="text-muted-foreground">No description available.</p>
+            )}
+          </Prose>
 
           {Array.isArray(position.skills) && position.skills.length > 0 && (
             <div className="flex flex-wrap gap-1.5 pt-2 pl-9">
