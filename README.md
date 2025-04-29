@@ -7,7 +7,7 @@ Here is the **shortened and updated English version** of your README, with the n
 **[ngoctien.dev](https://ngoctien.com)** is my personal portfolio website showcasing my projects and experience as a **Junior Fullstack Developer**, with a strong focus on backend development. Built with [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com), and [shadcn/ui](https://ui.shadcn.com), it delivers a fast and modern user experience.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./public/screenshot-wide-dark.webp">
+  <source media="(prefers-color-scheme: dark)" srcset="./public/images/Screenshot.png">
   <img src="./public/images/Screenshot.png" alt="Screenshot">
 </picture>
 
