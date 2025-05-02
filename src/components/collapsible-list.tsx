@@ -1,3 +1,4 @@
+"use client";
 import { Slot } from "@radix-ui/react-slot";
 import { ChevronDownIcon } from "lucide-react";
 import React from "react";
@@ -8,6 +9,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import { useTranslation } from "@/hooks/use-translation";
 
 export function CollapsibleList<T>({
   items,
@@ -22,6 +24,9 @@ export function CollapsibleList<T>({
   keyExtractor?: (item: T) => string;
   renderItem: (item: T) => React.ReactNode;
 }) {
+  const { t } = useTranslation();
+  const hasMore = items.length > max;
+
   return (
     <Collapsible>
       {items.slice(0, max).map((award, index) => (
@@ -33,34 +38,38 @@ export function CollapsibleList<T>({
         </Slot>
       ))}
 
-      <CollapsibleContent>
-        {items.slice(max).map((award, index) => (
-          <Slot
-            key={
-              typeof keyExtractor === "function"
-                ? keyExtractor(award)
-                : max + index
-            }
-            className="border-b border-grid"
-          >
-            {renderItem(award)}
-          </Slot>
-        ))}
-      </CollapsibleContent>
+      {hasMore && (
+        <>
+          <CollapsibleContent>
+            {items.slice(max).map((award, index) => (
+              <Slot
+                key={
+                  typeof keyExtractor === "function"
+                    ? keyExtractor(award)
+                    : max + index
+                }
+                className="border-b border-grid"
+              >
+                {renderItem(award)}
+              </Slot>
+            ))}
+          </CollapsibleContent>
 
-      <CollapsibleTrigger asChild>
-        <Button className="group/collapsible-trigger mx-auto -mt-px flex">
-          <ChevronDownIcon className="group-[&[data-state=open]]/collapsible-trigger:rotate-180" />
+          <CollapsibleTrigger asChild>
+            <Button className="group/collapsible-trigger mx-auto -mt-px flex">
+              <ChevronDownIcon className="group-[&[data-state=open]]/collapsible-trigger:rotate-180" />
 
-          <span className="hidden group-[&[data-state=closed]]/collapsible-trigger:block">
-            Show more ({items.length - max})
-          </span>
+              <span className="hidden group-[&[data-state=closed]]/collapsible-trigger:block">
+                {t("common.showMore")} ({items.length - max})
+              </span>
 
-          <span className="hidden group-[&[data-state=open]]/collapsible-trigger:block">
-            Show less ({items.length - max})
-          </span>
-        </Button>
-      </CollapsibleTrigger>
+              <span className="hidden group-[&[data-state=open]]/collapsible-trigger:block">
+                {t("common.showLess")} ({items.length - max})
+              </span>
+            </Button>
+          </CollapsibleTrigger>
+        </>
+      )}
     </Collapsible>
   );
 }

@@ -4,6 +4,7 @@ import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import Link from "next/link";
 
 import { ChanhDaiMark } from "@/components/chanhdai-mark";
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { NavItemGitHub } from "@/components/nav-item-github";
 import { ToggleTheme } from "@/components/toggle-theme";
 
@@ -22,7 +23,7 @@ export function StickyHeader() {
       style={{ translateY: top }}
     >
       <div className="mx-auto px-4 md:max-w-3xl">
-        <div className="screen-line-before screen-line-after flex h-12 items-center gap-4 border-x border-grid px-2">
+        <div className="screen-line-before screen-line-after flex h-12 items-center gap-2 border-x border-grid px-2">
           <Link href="/">
             <ChanhDaiMark className="h-8" />
           </Link>
@@ -32,6 +33,7 @@ export function StickyHeader() {
           <NavScrollspy className="max-sm:hidden" />
 
           <div className="flex items-center gap-2">
+            <LanguageSwitcher />
             <NavItemGitHub />
             <ToggleTheme />
             <NavDropdown className="sm:hidden" />

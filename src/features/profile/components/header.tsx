@@ -1,8 +1,14 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { Markdown } from "@/components/markdown";
 import { NavItemGitHub } from "@/components/nav-item-github";
 import { ToggleTheme } from "@/components/toggle-theme";
 import { Prose } from "@/components/ui/typography";
 import { USER } from "@/data/user";
+import { useTranslation } from "@/hooks/use-translation";
 
 import { ChanhDaiAvatar } from "./chanhdai-avatar";
 // import { ChanhDaiCoverHello } from "./chanhdai-cover-hello";
@@ -11,12 +17,40 @@ import { NavDropdown } from "./nav/nav-dropdown";
 import { SocialLinks } from "./social-links";
 
 export function Header() {
+  const { t } = useTranslation();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <header className="relative mb-8">
+        <div className="flex flex-col-reverse items-center gap-8 rounded-xl p-8 shadow md:flex-row md:items-start">
+          <div className="flex-1">
+            <p className="mb-2 text-sm tracking-widest text-zinc-950 md:text-base dark:text-zinc-50">
+              Welcome to my portfolio
+            </p>
+            <h1 className="font-heading text-3xl font-bold text-zinc-950 sm:text-4xl md:text-5xl dark:text-zinc-50">
+              {USER.displayName}
+            </h1>
+            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+              {USER.bio}
+            </p>
+          </div>
+        </div>
+      </header>
+    );
+  }
+
   return (
     <header className="relative mt-12">
       <div className="flex h-12 items-center justify-end gap-4 border-x border-grid px-2">
         <Nav className="max-sm:hidden" />
 
         <div className="flex items-center gap-2">
+          <LanguageSwitcher />
           <NavItemGitHub />
           <ToggleTheme />
           <NavDropdown className="sm:hidden" />
@@ -27,24 +61,24 @@ export function Header() {
         <div className="flex flex-col-reverse items-center gap-8 rounded-xl p-8 shadow md:flex-row md:items-start">
           <div className="flex-1">
             <p className="mb-2 text-sm tracking-widest text-zinc-950 md:text-base dark:text-zinc-50">
-              {USER.welcome}
+              {t("header.welcome")}
             </p>
             <h1 className="font-heading text-3xl font-bold text-zinc-950 sm:text-4xl md:text-5xl dark:text-zinc-50">
-              Hello, World!
+              {t("header.hello")}
               <br />
-              I&apos;m{" "}
+              {t("header.im")}{" "}
               <span className="text-zinc-950 dark:text-white">
                 {USER.displayName}
               </span>
             </h1>
             <h2 className="font-heading text-3xl font-bold text-zinc-950 sm:text-4xl md:text-5xl dark:text-zinc-50">
-              a{" "}
+              {t("header.a")}{" "}
               <span className="bg-gradient-to-r from-purple-500 to-blue-400 bg-clip-text text-2xl text-transparent sm:text-3xl md:text-4xl">
                 {"{Junior Developer.}"}
               </span>
             </h2>
             <Prose className="mt-8 text-zinc-950 dark:text-zinc-50">
-              <Markdown>{USER.intro}</Markdown>
+              <Markdown>{t("intro")}</Markdown>
             </Prose>
           </div>
 
