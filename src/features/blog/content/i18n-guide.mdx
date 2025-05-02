@@ -1,0 +1,161 @@
+---
+title: Hướng dẫn triển khai đa ngôn ngữ cho dự án Next.js
+description: Hướng dẫn chi tiết cách triển khai và sử dụng tính năng đa ngôn ngữ trong dự án Next.js.
+image: /images/blog/i18n_nextjs.jpg
+createdAt: 2024-04-29
+updatedAt: 2024-04-29
+---
+
+
+## Cấu trúc hiện tại
+
+Dự án đã có sẵn cấu trúc đa ngôn ngữ với:
+
+- Thư mục `src/messages/` chứa các file ngôn ngữ
+- Hook `useTranslation` để quản lý việc dịch
+- Context `LanguageContext` để quản lý ngôn ngữ
+- Component `LanguageSwitcher` để chuyển đổi ngôn ngữ
+
+## Cách sử dụng
+
+### Thêm nội dung mới vào file ngôn ngữ
+
+Thêm nội dung vào cả hai file `en.json` và `vi.json` trong thư mục `src/messages/`:
+
+```json
+{
+  "key": {
+    "nested": {
+      "text": "Nội dung tiếng Anh"
+    }
+  }
+}
+```
+
+### Sử dụng trong components
+
+Import và sử dụng hook `useTranslation`:
+
+```tsx
+import { useTranslation } from "@/hooks/use-translation";
+
+export function MyComponent() {
+  const { t } = useTranslation();
+
+  return <div>{t("key.nested.text")}</div>;
+}
+```
+
+### Thêm ngôn ngữ mới
+
+1. Tạo file ngôn ngữ mới trong thư mục `src/messages/`, ví dụ: `fr.json`
+2. Cập nhật type `Language` trong `src/hooks/use-language.tsx`:
+
+```typescript
+type Language = "vi" | "en" | "fr";
+```
+
+3. Cập nhật hook `useTranslation` để import file ngôn ngữ mới:
+
+```typescript
+import frMessages from "@/messages/fr.json";
+```
+
+4. Cập nhật logic chọn ngôn ngữ:
+
+```typescript
+const messages: Messages =
+  language === "en" ? enMessages : language === "vi" ? viMessages : frMessages;
+```
+
+## Best Practices
+
+### Tổ chức keys
+
+Sử dụng cấu trúc phân cấp rõ ràng cho các keys:
+
+```json
+{
+  "section": {
+    "component": {
+      "text": "Nội dung"
+    }
+  }
+}
+```
+
+### Đặt tên keys
+
+Sử dụng tên mô tả và nhất quán:
+
+- Tốt: `navigation.home`, `blog.title`
+- Không tốt: `nav1`, `title1`
+
+### Tái sử dụng
+
+Sử dụng lại các keys chung:
+
+```json
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error"
+  }
+}
+```
+
+### Biến động
+
+Sử dụng template strings cho nội dung động:
+
+```json
+{
+  "welcome": "Welcome, {name}!"
+}
+```
+
+## Xử lý SEO
+
+### Meta tags cho ngôn ngữ
+
+```tsx
+<head>
+  <meta httpEquiv="content-language" content={language} />
+  <link
+    rel="alternate"
+    hrefLang="vi"
+    href={`https://yourdomain.com/vi${path}`}
+  />
+  <link
+    rel="alternate"
+    hrefLang="en"
+    href={`https://yourdomain.com/en${path}`}
+  />
+</head>
+```
+
+### Cập nhật lang attribute
+
+```tsx
+<html lang={language}>
+```
+
+## Kiểm tra và bảo trì
+
+1. **Kiểm tra tính đầy đủ**: Đảm bảo tất cả các keys có trong tất cả các file ngôn ngữ
+2. **Format nhất quán**: Sử dụng Prettier hoặc ESLint để đảm bảo format nhất quán
+3. **Kiểm tra hiệu suất**: Đảm bảo việc tải ngôn ngữ không ảnh hưởng đến hiệu suất
+
+## Các bước tiếp theo
+
+1. Thêm các ngôn ngữ mới nếu cần
+2. Tối ưu hóa việc tải ngôn ngữ
+3. Thêm tính năng tự động phát hiện ngôn ngữ từ trình duyệt
+4. Thêm tính năng lưu trữ ngôn ngữ đã chọn
+5. Cải thiện UX cho việc chuyển đổi ngôn ngữ
+
+## References
+
+- [Next.js Internationalization](https://nextjs.org/docs/app/building-your-application/routing/internationalization)
+- [MDN Web Docs - Language tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)
+- [W3C Internationalization](https://www.w3.org/International/)

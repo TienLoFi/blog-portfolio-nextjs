@@ -3,26 +3,38 @@
     "home": "Home",
     "about": "About",
     "blog": "Blog",
-    "contact": "Contact"
+    "contact": "Contact",
+    "experience": "Experience",
+    "projects": "Projects",
+    "awards": "Awards",
+    "certs": "Certifications"
   },
   "common": {
     "loading": "Loading...",
     "error": "Error",
     "readMore": "Read More",
-    "back": "Back"
+    "back": "Back",
+    "home": "Home",
+    "blog": "Blog",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact",
+    "showMore": "Show more",
+    "showLess": "Show less"
   },
   "header": {
     "welcome": "Welcome to my portfolio",
     "hello": "Hello, World!",
     "im": "I'm",
-    "a": "a",
-    "juniorDeveloper": "{Junior Developer.}"
+    "a": "a"
   },
   "blog": {
     "title": "Blog",
     "backToBlog": "Back to Blog",
     "published": "Published on"
   },
+
+  "allPosts": "All Posts",
   "components": {
     "preview": "Preview",
     "code": "Code",
@@ -47,7 +59,6 @@
     "prize": "Prize",
     "date": "Date",
     "grade": "Grade",
-    "description": "Description",
     "field": "Field",
     "project": "Project",
     "organizedIn": "Organized in",
@@ -56,7 +67,11 @@
     "completed": "Completed",
     "within": "within",
     "hours": "hours",
-    "youngestTeam": "Youngest competing team to win an award"
+    "youngestTeam": "Youngest competing team to win an award",
+
+    "description": {
+      "hcmc-excellent-student-2024": "Top 7 in the Ho Chi Minh City Excellent Student Web Design Competition 2024.\n- Designed and developed a website titled “Saigon River – The River of My City”, highlighting its historical significance, beauty, and role in Ho Chi Minh City’s development.\n- Built a responsive and user-friendly interface using HTML, CSS, and JavaScript.\n- Optimized layout, visuals, and storytelling to effectively communicate cultural and geographical values.\n- Ranked in the Top 7 citywide, receiving positive feedback for content depth and user experience."
+    }
   },
   "certifications": {
     "title": "Certifications",
@@ -83,6 +98,12 @@
       "developedFeature": "Developed a feature",
       "developedWebsites": "Developed websites",
       "builtWebsites": "Built websites"
+    },
+    "descriptions": {
+      "cedd7adb-4118-4085-9983-ae00530b49e2": "Develop and maintain [VPBank Credit Card Mobile Web Application](https://cards.fimi.tech) for online credit card registration.\n- Collaborate in a 2-member team to implement full features from frontend to backend.\n- Design and develop frontend using ReactJS with React Hooks, Context API, and functional components for seamless user experience.\n- Build and integrate backend using PHP (Laravel), ensuring API stability and scalability.\n- Handle HTTP communication using Guzzle to connect with external services.\n- Integrate AWS S3 for secure and scalable file storage (eKYC documents, ID images).\n- Participate in bug fixing, UI optimization, and performance improvements across mobile web views.\n- Technologies used: ReactJS, Context API, Laravel, Guzzle, AWS S3.",
+      "20f8bfe5-b6a3-4b0d-ac2f-6fccd50d417e": "Develop and maintain the Affiliate Marketing Tool module for [Fimi's CRM system](https://backend.fimi.tech), including Campaigns, Programs, Product Categories, and Publishers.\n- Design and implement features to manage marketing campaigns with configurable budgets, durations, and performance metrics.\n- Build program management capabilities to group and coordinate multiple campaigns.\n- Create and manage product categories linked to each campaign for targeted tracking.\n- Develop publisher onboarding, role management, performance tracking, and commission handling.\n- Integrate real-time reporting dashboards for clicks, conversions, and revenue.\n- Technologies used: PHP Laravel, MySQL, RESTful API, Blade Templates, Laravel Auth & Middleware",
+      "cedd7adb-4118-4085-9983-ae00530b49e3": "Contributed to the development of [ZUDO App](https://zudo.vn) during internship, a platform that connects multiple e-commerce systems into a unified desktop interface.\n- Collaborated in a 3-member team to implement features on both frontend and backend.\n- Developed mobile-friendly UI using Flutter (Dart) for responsive and cross-platform support.\n- Built and maintained backend using PHP (Laravel) for core business logic and API services.\n- Integrated AWS S3 for file and image storage across platforms.\n- Participated in debugging, testing, and refining features to ensure stable deployment.\n- Technologies used: Flutter (Dart), Laravel, AWS S3.",
+      "20f8bfe5-b6a3-4b0d-ac2f-6fccd50d417t": "Collaborated with the [Hitech](https://hitech-vn.com/) team to complete the [ZUDO Desktop App](https://zudo.vn) from March to May 2025.\n- Developed and integrated RESTful APIs for core features such as orders, inventory, and user accounts.\n- Completed frontend development using Flutter, optimized for desktop experience.\n- Built and finalized backend logic using Laravel, handling database operations and business rules.\n- Optimized system performance, fixed bugs, and performed end-to-end testing.\n- Integrated image and document upload/management using AWS S3.\n- Participated in technical meetings and solution discussions with the Hitech team under agile workflow.\n- Technologies used: Flutter (Dart), Laravel, MySQL, RESTful API, AWS S3."
     }
   },
   "projects": {
@@ -105,7 +126,7 @@
     "connect": "Connect with me on"
   },
   "techStack": {
-    "title": "Tech Stack",
+    "title": "Stack",
     "categories": {
       "language": "Language",
       "runtimeEnvironment": "Runtime Environment",
@@ -123,6 +144,36 @@
     }
   },
   "welcome": "Welcome to my portfolio",
-  "intro": "I am a passionate developer who loves to create beautiful and functional web applications.",
-  "displayName": "Chanh Dai"
+  "intro": "I am a Junior Fullstack Developer with a strong focus on backend development, passionate about building web applications with clean architecture, robust functionality, and high performance. I constantly strive to learn new technologies to improve my skills and contribute effectively to projects.",
+  "profile": {
+    "socialLinks": {
+      "title": "Find Me With Me",
+      "ariaLabel": "Social Links"
+    },
+    "about": {
+      "title": "About"
+    },
+    "skills": {
+      "title": "Skills"
+    },
+    "projects": {
+      "title": "Projects"
+    },
+    "awards": {
+      "title": "Awards"
+    },
+    "certifications": {
+      "title": "Certifications"
+    },
+    "experiences": {
+      "title": "Experiences"
+    }
+  },
+  "footer": {
+    "inspiredBy": "Inspired by chanhdai.com.",
+    "builtBy": "Built by",
+    "sourceCode": "The source code is available on",
+    "github": "GitHub"
+  },
+  "about": "Hello, I'm Hà Ngọc Tiến, a Developer with 1 year of experience in software development. I am proficient in front-end and back-end technologies such as React, JavaScript, Next.js, TypeScript, PHP, and Laravel. I am passionate about building efficient web products, optimizing user experience, and always ready to learn new technologies to improve my skills. My goal is to continuously develop my technical abilities and contribute to creative projects that deliver real value to users."
 }

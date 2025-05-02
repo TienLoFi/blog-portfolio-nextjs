@@ -19,7 +19,7 @@ export function NavScrollspy({ className }: { className?: string }) {
 }
 
 function useActiveItem(itemIds: string[], enabled = true) {
-  const [activeId, setActiveId] = useState<string | null>(null);
+  const [activeId, setActiveId] = useState<string | null>(itemIds[0] || null);
 
   useEffect(() => {
     if (!enabled) {
@@ -34,7 +34,10 @@ function useActiveItem(itemIds: string[], enabled = true) {
           }
         });
       },
-      { rootMargin: `0% 0% -80% 0%` }
+      {
+        rootMargin: `-20% 0% -20% 0%`,
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+      }
     );
 
     itemIds?.forEach((id) => {

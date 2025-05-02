@@ -1,5 +1,8 @@
+"use client";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import React from "react";
+
+import { useTranslation } from "@/hooks/use-translation";
 
 import { EXPERIENCES } from "../../data/experiences";
 import { Panel, PanelHeader, PanelTitle } from "../panel";
@@ -9,11 +12,11 @@ export function Experiences() {
   const defaultValue = EXPERIENCES.flatMap((exp) =>
     exp.positions.filter((pos) => pos.expanded).map((pos) => pos.id)
   );
-
+  const { t } = useTranslation();
   return (
     <Panel id="experience" className="scroll-mt-[4.75rem]">
       <PanelHeader>
-        <PanelTitle>Experience</PanelTitle>
+      <PanelTitle>{t("profile.experiences.title")}</PanelTitle>
       </PanelHeader>
 
       <AccordionPrimitive.Root

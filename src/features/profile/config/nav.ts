@@ -1,26 +1,27 @@
+// config/nav.ts
 export const NAV_LINKS = [
   {
-    title: "About",
+    key: "about",
     href: "#about",
   },
   {
-    title: "Blog",
+    key: "blog",
     href: "/blog",
   },
   {
-    title: "Experience",
+    key: "experience",
     href: "#experience",
   },
   {
-    title: "Projects",
+    key: "projects",
     href: "#projects",
   },
   {
-    title: "Awards",
+    key: "awards",
     href: "#awards",
   },
   {
-    title: "Certs",
+    key: "certs",
     href: "#certs",
   },
 ];
