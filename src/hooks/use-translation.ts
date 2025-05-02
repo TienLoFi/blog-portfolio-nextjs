@@ -30,6 +30,5 @@ export function useTranslation() {
 
     return (value as string) || key;
   };
-
   return useMemo(() => ({ t, language }), [language, messages]);
 }

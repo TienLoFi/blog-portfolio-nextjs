@@ -43,7 +43,6 @@ export const rehypeComponent: Plugin<[], Root> = () => {
     });
   };
 };
-
 function getNodeAttributeByName(node: UnistNode, name: string) {
   return node.attributes?.find((attribute) => attribute.name === name);
 }
