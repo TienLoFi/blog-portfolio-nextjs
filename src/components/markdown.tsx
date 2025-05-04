@@ -2,11 +2,11 @@
 
 import { Suspense } from "react";
 import MarkdownAsync from "react-markdown";
-import remarkGfm from "remark-gfm";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeRaw from "rehype-raw";
 import rehypeSanitize from "rehype-sanitize";
 import rehypeSlug from "rehype-slug";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import remarkGfm from "remark-gfm";
 
 export function Markdown(props: React.ComponentProps<typeof MarkdownAsync>) {
   return (

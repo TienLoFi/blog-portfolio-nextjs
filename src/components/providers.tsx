@@ -5,8 +5,9 @@ import { Provider as JotaiProvider } from "jotai";
 import { ThemeProvider } from "next-themes";
 
 import { Toaster } from "@/components/ui/sonner";
-import { PostHogProvider } from "./posthog-provider";
 import { LanguageProvider } from "@/hooks/use-language";
+
+import { PostHogProvider } from "./posthog-provider";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (

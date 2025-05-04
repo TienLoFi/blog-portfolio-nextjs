@@ -1,7 +1,8 @@
+"use client";
+
 import "@/styles/globals.css";
 
-import { Metadata, Viewport } from "next";
-import { cookies } from "next/headers"; // Lấy cookies từ Next.js
+import { useEffect, useState } from "react";
 
 import { Providers } from "@/components/providers";
 import { META_THEME_COLORS, SITE_INFO } from "@/config/site";
@@ -9,84 +10,28 @@ import { USER } from "@/data/user";
 import { LanguageProvider } from "@/hooks/use-language";
 import { fontMono, fontSans } from "@/lib/fonts";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_INFO.url),
-  alternates: {
-    canonical: "/",
-  },
-  title: {
-    template: `%s / ${SITE_INFO.name}`,
-    default: `${USER.displayName} – ${USER.jobTitle}`,
-  },
-  description: SITE_INFO.description,
-  keywords: SITE_INFO.keywords,
-  authors: [
-    {
-      name: "ncdai",
-      url: SITE_INFO.url,
-    },
-  ],
-  creator: "ncdai",
-  openGraph: {
-    siteName: SITE_INFO.name,
-    url: "/",
-    type: "profile",
-    firstName: USER.firstName,
-    lastName: USER.lastName,
-    username: USER.username,
-    gender: USER.gender,
-    images: [
-      {
-        url: SITE_INFO.ogImage,
-        width: 1200,
-        height: 630,
-        alt: SITE_INFO.name,
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    creator: "@iamncdai", // Twitter username
-    images: [SITE_INFO.ogImage],
-  },
-  icons: {
-    icon: [
-      {
-        url: "/favicon.ico",
-        sizes: "any",
-      },
-      {
-        url: "/favicon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: {
-      url: "/apple-touch-icon.png",
-      type: "image/png",
-      sizes: "180x180",
-    },
-  },
-};
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  viewportFit: "cover",
-  themeColor: META_THEME_COLORS.light,
-};
-
-// Hàm lấy ngôn ngữ từ cookie
-function getUserLang() {
-  const langCookie = cookies().get("NEXT_LOCALE")?.value;
-  return langCookie || "en"; // Mặc định là 'en' nếu không có cookie
-}
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const lang = getUserLang();
+  const [lang, setLang] = useState("en"); // Default language is 'en'
+
+  useEffect(() => {
+    // Lấy cookie từ document.cookie
+    const getUserLang = () => {
+      const cookies = document.cookie
+        .split("; ")
+        .reduce((acc: Record<string, string>, cookie) => {
+          const [key, value] = cookie.split("=");
+          acc[key] = value;
+          return acc;
+        }, {});
+      return cookies["NEXT_LOCALE"] || "en"; // Default to 'en' if no cookie is found
+    };
+
+    setLang(getUserLang());
+  }, []);
 
   return (
     <html

@@ -1,10 +1,10 @@
 import fs from "node:fs";
 import path from "node:path";
 
+import type { Root } from "hast";
+import type { Plugin } from "unified";
 import { u } from "unist-builder";
 import { visit } from "unist-util-visit";
-import type { Plugin } from "unified";
-import type { Root } from "hast";
 
 import { Index } from "@/__registry__/index";
 import { UnistNode, UnistTree } from "@/types/unist";

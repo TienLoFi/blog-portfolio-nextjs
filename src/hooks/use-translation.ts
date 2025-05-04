@@ -1,9 +1,10 @@
 "use client";
 
+import { useMemo } from "react";
+
 import { useLanguage } from "@/hooks/use-language";
 import enMessages from "@/messages/en.json";
 import viMessages from "@/messages/vi.json";
-import { useMemo } from "react";
 
 type Messages = typeof enMessages;
 

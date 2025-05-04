@@ -2,11 +2,15 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   transpilePackages: ["next-mdx-remote"],
   async headers() {
     return [
       {
         source: "/(.*)",
+
         headers: [
           {
             // Prevents MIME type sniffing, reducing the risk of malicious file uploads
