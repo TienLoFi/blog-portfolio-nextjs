@@ -1,29 +1,48 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
- 
-name: Node.js CI
- 
+name: Deploy to AWS EC2
+
+permissions:
+  contents: read
+  pull-requests: write
+
 on:
   push:
-    branches: [ "main" ] # Thay đổi branch của bạn muốn khi push lên sẽ thay đổi
+    branches: [ main ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ main ]
+
 jobs:
-  build:
- 
-    runs-on: self-hosted # Thay đổi runner của bạn như bước 3 mình đã chọn self-hosted
- 
-    strategy:
-      matrix:
-        node-version: [18.x] # Thay đổi phiên bản nodejs của bạn
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
- 
+  deploy:
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Deploy to EC2
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: out/*
+          target: /var/www/html
+          strip_components: 0
+
+      - name: Restart Nginx
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            sudo systemctl restart nginx
