@@ -1,0 +1,219 @@
+---
+title: Kiểm Tra Kiến Thức Laravel P1
+description: Kiểm tra củng cố kiến thức Laravel.
+image: /images/blog/i18n_nextjs.jpg
+createdAt: 2024-05-21
+updatedAt: 2024-05-21
+---
+
+## Câu 1. Cấu Trúc Route Cơ Bản
+```php
+Route::get('/user', [UserController::class, 'index']);
+````
+
+Gửi request GET đến `/user`, gọi phương thức `index` trong `UserController`.
+
+---
+
+## Câu 2. Tạo Model có Migration
+
+```bash
+php artisan make:model Product -m
+```
+
+Tham số `-m` sẽ tạo thêm một file migration cho model `Product`.
+
+---
+
+## Câu 3. Lấy tất cả bản ghi
+
+```php
+$users = User::all();
+```
+
+---
+
+## Câu 4. Thêm mới bản ghi
+
+```php
+$product = new Product();
+$product->name = 'Tiến đẹp trai';
+$product->save();
+```
+
+---
+
+## Câu 5. Tìm một bản ghi
+
+```php
+$user = User::find(5);
+```
+
+Tìm một bản ghi với `id` bằng 5.
+
+---
+
+## Câu 6. Tìm và cập nhật bản ghi
+
+```php
+$user = User::find(5);
+$user->status = 'active';
+$user->save();
+```
+
+---
+
+## Câu 7. Lọc dữ liệu với where
+
+```php
+$activeUsers = User::where('status', 'active')->get();
+```
+
+---
+
+## Câu 8. Cập nhật dữ liệu bằng hàm
+
+```php
+public function updatePrice($id) {
+    $product = Product::find($id);
+    $product->price = 100;
+    $product->save();
+}
+```
+
+---
+
+## Câu 9. Xoá bản ghi
+
+```php
+public function deleteUser($id) {
+    $user = User::find($id);
+    $user->delete();
+}
+```
+
+---
+
+## Câu 10. Middleware là gì
+
+```php
+Route::middleware(['auth'])->group(function () {
+    // Chỉ cho user đã đăng nhập
+});
+```
+
+---
+
+## Câu 11. Auth::check() – Kiểm tra người dùng đã đăng nhập
+
+```php
+if (!Auth::check()) {
+    return redirect()->route('login');
+}
+```
+
+---
+
+## Câu 12. So sánh: find vs findOrFail
+
+* `find`: Trả về `null` nếu không tìm thấy.
+* `findOrFail`: Nếu không tìm thấy sẽ tự động trả về lỗi 404.
+
+---
+
+## Câu 13. Tạo bản ghi với `create()`
+
+```php
+// Trong model
+protected $fillable = ['name', 'price'];
+
+// Trong controller
+Product::create(['name' => 'Tiến', 'price' => 300]);
+```
+
+---
+
+## Câu 14. Tạo tự động các route CRUD trong 1 dòng
+
+```php
+Route::resource('/users', UserController::class);
+```
+
+---
+
+## Câu 15. Trả về JSON
+
+```php
+public function getUsers() {
+    $users = User::all();
+    return response()->json($users);
+}
+```
+
+---
+
+## Câu 16. Quan hệ One to Many (1-n)
+
+```php
+// Trong User model
+public function posts() {
+    return $this->hasMany(Post::class);
+}
+```
+
+---
+
+## Câu 17. Migration dùng để tạo bảng
+
+```bash
+php artisan migrate
+php artisan migrate:rollback
+```
+
+---
+
+## Câu 18. Eloquent ORM là gì?
+
+Eloquent giúp giao tiếp với database thông qua model thay vì viết SQL thủ công.
+
+---
+
+## Câu 19. Soft Deletes (Xoá mềm)
+
+### Trong Model:
+
+```php
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class User extends Model {
+    use SoftDeletes;
+}
+```
+
+### Trong Migration:
+
+```php
+$table->softDeletes(); // thêm cột deleted_at
+```
+
+### Sử dụng:
+
+```php
+User::withTrashed()->get();     // lấy tất cả, kể cả đã xoá
+User::onlyTrashed()->get();     // chỉ lấy bản ghi đã xoá
+User::find($id)->restore();     // khôi phục
+User::find($id)->forceDelete(); // xoá vĩnh viễn
+```
+
+---
+
+## Câu 20. Eager Loading – Tránh N+1 Query
+
+```php
+$users = User::with('posts')->get();
+```
+
+Lấy user + các bài viết (posts) liên quan chỉ trong 1 truy vấn duy nhất.
+
+---
+
