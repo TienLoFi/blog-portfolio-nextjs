@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import { useState } from "react";
 
-import { ChanhDaiWordmark } from "@/components/chanhdai-wordmark";
+import { NgocTienWordmark } from "@/components/ngoc-tien-wordmark";
 
 const variants = {
   show: {
@@ -65,7 +65,7 @@ export function LogoResizeAnimation({
         {Math.round(width)}x{Math.round(width / 2)}
       </motion.div>
 
-      <ChanhDaiWordmark className="size-full text-black dark:text-white" />
+      <NgocTienWordmark className="size-full text-black dark:text-white" />
     </motion.div>
   );
 }

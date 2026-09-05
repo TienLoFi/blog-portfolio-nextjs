@@ -4,7 +4,7 @@ import { RepeatIcon } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import React, { useCallback, useState } from "react";
 
-import { ChanhDaiMark } from "@/components/chanhdai-mark";
+import { NgocTienMark } from "@/components/ngoc-tien-mark";
 import { Button } from "@/components/ui/button";
 import { SimpleTooltip } from "@/components/ui/tooltip";
 import {
@@ -12,7 +12,7 @@ import {
   AppleHelloVietnameseEffect,
 } from "@/registry/apple-hello-effect";
 
-const layers = ["xin-chao", "hello", "chanhdai-wordmark"] as const;
+const layers = ["xin-chao", "hello", "ngoc-tien-wordmark"] as const;
 
 export function Hello() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -67,14 +67,14 @@ export function Hello() {
             />
           )}
 
-          {layers[currentIndex] === "chanhdai-wordmark" && (
+          {layers[currentIndex] === "ngoc-tien-wordmark" && (
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.5 }}
             >
-              <ChanhDaiMark className="h-12 sm:h-16" />
+              <NgocTienMark className="h-12 sm:h-16" />
             </motion.div>
           )}
 

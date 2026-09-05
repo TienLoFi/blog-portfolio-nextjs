@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { ChanhDaiMark } from "@/components/chanhdai-mark";
+import { NgocTienMark } from "@/components/ngoc-tien-mark";
 import { Footer } from "@/components/footer";
 import { NavItemGitHub } from "@/components/nav-item-github";
 import { NavItemRSS } from "@/components/nav-item-rss";
@@ -19,8 +19,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="mx-auto px-4 md:max-w-3xl">
           <div className="mt-2 min-h-[calc(100vh-0.5rem)] border-x border-grid">
             <div className="screen-line-before screen-line-after flex h-12 items-center justify-between px-2">
-              <Link href="/">
-                <ChanhDaiMark className="h-8" />
+              <Link href="/" aria-label="Ngọc Tiến">
+                <NgocTienMark className="h-8" />
               </Link>
 
               <div className="flex items-center gap-2">

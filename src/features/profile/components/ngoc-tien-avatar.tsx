@@ -3,7 +3,7 @@ import Image from "next/image";
 import ImgAvatar from "@/../public/images/ngoctien_avatar_ghibli.png";
 import { USER } from "@/data/user";
 
-export function ChanhDaiAvatar({
+export function NgocTienAvatar({
   className,
   size,
   priority = true,

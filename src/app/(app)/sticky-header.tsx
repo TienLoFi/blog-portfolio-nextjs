@@ -3,7 +3,7 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import Link from "next/link";
 
-import { ChanhDaiMark } from "@/components/chanhdai-mark";
+import { NgocTienMark } from "@/components/ngoc-tien-mark";
 import { NavItemGitHub } from "@/components/nav-item-github";
 import { NavItemRSS } from "@/components/nav-item-rss";
 import { ToggleTheme } from "@/components/toggle-theme";
@@ -21,8 +21,8 @@ export function StickyHeader() {
     >
       <div className="mx-auto px-4 md:max-w-3xl">
         <div className="screen-line-before screen-line-after flex h-12 items-center justify-between border-x border-grid px-2">
-          <Link href="/">
-            <ChanhDaiMark className="h-8" />
+          <Link href="/" aria-label="Ngọc Tiến">
+            <NgocTienMark className="h-8" />
           </Link>
 
           <div className="flex items-center gap-2">

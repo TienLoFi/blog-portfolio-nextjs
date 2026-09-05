@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-import { ChanhDaiMark } from "@/components/chanhdai-mark";
+import { NgocTienMark } from "@/components/ngoc-tien-mark";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { NavItemGitHub } from "@/components/nav-item-github";
 import { NavItemRSS } from "@/components/nav-item-rss";
@@ -16,8 +16,12 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
         <div className="mr-4 hidden md:flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <ChanhDaiMark className="h-6" />
+          <Link
+            href="/"
+            aria-label="Ngọc Tiến"
+            className="mr-6 flex items-center space-x-2"
+          >
+            <NgocTienMark className="h-6" />
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
             <Link

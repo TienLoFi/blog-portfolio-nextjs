@@ -10,8 +10,7 @@ import { Prose } from "@/components/ui/typography";
 import { USER } from "@/data/user";
 import { useTranslation } from "@/hooks/use-translation";
 
-import { ChanhDaiAvatar } from "./chanhdai-avatar";
-// import { ChanhDaiCoverHello } from "./chanhdai-cover-hello";
+import { NgocTienAvatar } from "./ngoc-tien-avatar";
 import { Nav } from "./nav/nav";
 import { NavDropdown } from "./nav/nav-dropdown";
 import { SocialLinks } from "./social-links";
@@ -106,7 +105,7 @@ export function Header() {
                 />
               </svg>
             </div>
-            <ChanhDaiAvatar
+            <NgocTienAvatar
               className="relative z-10 h-40 w-40 rounded-full object-cover shadow-lg ring-1 ring-border ring-offset-2 ring-offset-background transition-transform duration-300 hover:scale-105 sm:h-48 sm:w-48 md:h-56 md:w-56 lg:h-64 lg:w-64"
               size={192}
             />

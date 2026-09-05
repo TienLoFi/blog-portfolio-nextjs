@@ -2,7 +2,7 @@ import { cn } from "@/lib/cn";
 
 import { Hello } from "./hello";
 
-export function ChanhDaiCoverHello() {
+export function NgocTienCoverHello() {
   return (
     <div
       className={cn(
