@@ -33,9 +33,9 @@ export const USER = {
 Xin chào, tôi là Hà Ngọc Tiến, một Lập trình viên với 1 năm kinh nghiệm trong lĩnh vực phát triển phần mềm. Tôi thành thạo các công nghệ front-end và back-end như React, JavaScript, Next.js, TypeScript, PHP và Laravel.
 Tôi đam mê xây dựng những sản phẩm web hiệu quả, tối ưu trải nghiệm người dùng và luôn sẵn sàng học hỏi công nghệ mới để nâng cao kỹ năng. Mục tiêu của tôi là không ngừng phát triển năng lực kỹ thuật và đóng góp vào những dự án sáng tạo, mang lại giá trị thực cho người dùng.`,
   avatar: "/images/ngoctien_avatar_ghibli.png",
-  ogImage: "/images/chanhdai-og-image.png?v=250420",
+  ogImage: "/og/simple?title=Ng%E1%BB%8Dc%20Ti%E1%BA%BFn",
   keywords:
-    "ncdai, nguyenchanhdai, nguyen chanh dai, chanhdai, chanh dai, iamncdai, quaric, zadark, nguyễn chánh đại, chánh đại",
+    "Hà Ngọc Tiến, Ngọc Tiến, TienLoFi, Software Developer, Full Stack Developer, Next.js, React, TypeScript, Laravel",
   dateCreated: "2023-10-20", // YYYY-MM-DD
   intro: `
   Là một kỹ sư phần mềm, tôi luôn đam mê học hỏi các công nghệ mới

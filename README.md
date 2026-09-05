@@ -1,10 +1,6 @@
-Here is the **shortened and updated English version** of your README, with the name changed from **chanhdai** to **ngọc tiến** (and domain kept as-is for now):
+# ngoctien.com
 
----
-
-# ngoctien.dev
-
-**[ngoctien.dev](https://ngoctien.com)** is my personal portfolio website showcasing my projects and experience as a **Junior Fullstack Developer**, with a strong focus on backend development. Built with [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com), and [shadcn/ui](https://ui.shadcn.com), it delivers a fast and modern user experience.
+[ngoctien.com](https://ngoctien.com) is Hà Ngọc Tiến's personal portfolio for projects, experience, and software development notes.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./public/images/Screenshot.png">
@@ -32,5 +28,3 @@ Here is the **shortened and updated English version** of your README, with the n
 
 Released under the [MIT License](./LICENSE).
 Feel free to use this code for your own project — just remove my personal info before publishing!
-
----

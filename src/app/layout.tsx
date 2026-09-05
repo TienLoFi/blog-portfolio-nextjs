@@ -45,8 +45,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               try {
-                if (localStorage['chanhdai.theme'] === 'dark' ||
-                    ((!('chanhdai.theme' in localStorage) || localStorage['chanhdai.theme'] === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                if (localStorage['ngoctien.theme'] === 'dark' ||
+                    ((!('ngoctien.theme' in localStorage) || localStorage['ngoctien.theme'] === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                   document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}');
                 }
               } catch (_) {}

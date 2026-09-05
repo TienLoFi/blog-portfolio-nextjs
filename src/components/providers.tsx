@@ -20,7 +20,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
             enableSystem
             disableTransitionOnChange
             enableColorScheme
-            storageKey="chanhdai.theme"
+            storageKey="ngoctien.theme"
           >
             <AppProgressProvider
               color="#2563eb"

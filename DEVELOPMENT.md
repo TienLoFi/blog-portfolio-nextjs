@@ -15,17 +15,12 @@ Ensure you have the following installed:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/ncdai/chanhdai.com.git your-portfolio
-cd your-portfolio
+git clone https://github.com/TienLoFi/blog-portfolio-nextjs.git
+cd blog-portfolio-nextjs
+pnpm install --frozen-lockfile
 ```
 
-### 2. Install dependencies
-
-```bash
-pnpm i
-```
-
-### 3. Configure Environment Variables
+### 2. Configure Environment Variables
 
 Create a `.env.local` file based on `.env.example`:
 
@@ -35,7 +30,7 @@ cp .env.example .env.local
 
 Then, update the necessary environment variables inside `.env.local`.
 
-### 4. Run the development server
+### 3. Run the development server
 
 ```bash
 pnpm dev
@@ -64,10 +59,10 @@ This project utilizes **shadcn Registry**, which allows you to manage and distri
 If you're working on a different React project and want to reuse the custom components from this repository, you can add them using the **shadcn CLI** with the following commands:
 
 ```bash
-npx shadcn@latest add https://chanhdai.com/r/cn.json
-npx shadcn@latest add https://chanhdai.com/r/theme-switcher.json
-npx shadcn@latest add https://chanhdai.com/r/flip-sentences.json
-npx shadcn@latest add https://chanhdai.com/r/apple-hello-effect.json
+npx shadcn@latest add https://ngoctien.com/r/cn.json
+npx shadcn@latest add https://ngoctien.com/r/theme-switcher.json
+npx shadcn@latest add https://ngoctien.com/r/flip-sentences.json
+npx shadcn@latest add https://ngoctien.com/r/apple-hello-effect.json
 ```
 
 > Note: These components are compatible with [Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4) and [React 19](https://react.dev/blog/2024/12/05/react-19).
@@ -77,7 +72,8 @@ npx shadcn@latest add https://chanhdai.com/r/apple-hello-effect.json
 Documentation: [shadcn Registry Docs](https://ui.shadcn.com/docs/registry)
 
 Source files:
-  - `./src/registry`
+
+- `./src/registry`
 
 Before using the registry, run the following command to build and generate the registry JSON files:
 
