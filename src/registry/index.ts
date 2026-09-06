@@ -5,8 +5,8 @@ import { examples } from "./registry-examples";
 import { lib } from "./registry-lib";
 
 export const registry = {
-  name: "chanhdai/ui",
-  homepage: "https://chanhdai.com/ui",
+  name: "ngoctien/ui",
+  homepage: "https://ngoctien.com/ui",
   items: [
     ...lib,
     ...components,
