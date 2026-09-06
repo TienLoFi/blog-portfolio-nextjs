@@ -2,7 +2,13 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 
-type Language = "vi" | "en";
+export type Language = "vi" | "en";
+
+export const DEFAULT_LANGUAGE: Language = "vi";
+
+export function parseLanguage(value: string | null): Language | null {
+  return value === "vi" || value === "en" ? value : null;
+}
 
 interface LanguageContextType {
   language: Language;
@@ -14,19 +20,25 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 );
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>(() => {
-    if (typeof window !== "undefined") {
-      return (localStorage.getItem("language") as Language) || "vi";
-    }
-    return "vi";
-  });
+  const [language, setLanguage] = useState<Language>(DEFAULT_LANGUAGE);
 
   useEffect(() => {
-    localStorage.setItem("language", language);
-  }, [language]);
+    const storedLanguage = parseLanguage(localStorage.getItem("language"));
+
+    if (storedLanguage) {
+      setLanguage(storedLanguage);
+    }
+  }, []);
+
+  const updateLanguage = (nextLanguage: Language) => {
+    setLanguage(nextLanguage);
+    localStorage.setItem("language", nextLanguage);
+    document.cookie = `NEXT_LOCALE=${nextLanguage}; path=/; max-age=31536000; samesite=lax`;
+    document.documentElement.lang = nextLanguage;
+  };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage }}>
+    <LanguageContext.Provider value={{ language, setLanguage: updateLanguage }}>
       {children}
     </LanguageContext.Provider>
   );

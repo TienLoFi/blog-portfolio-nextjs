@@ -11,6 +11,7 @@ import { Prose } from "@/components/ui/typography";
 import { SITE_INFO } from "@/config/site";
 import { getAllPosts } from "@/data/blog";
 import { USER } from "@/data/user";
+import { SiteShell } from "@/features/portfolio-site/components/site-shell";
 import { Post } from "@/types/blog";
 
 export async function generateStaticParams() {
@@ -100,7 +101,7 @@ export default async function Page({
   const websiteJsonLd = getPageJsonLd(post);
 
   return (
-    <>
+    <SiteShell>
       <script
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         type="application/ld+json"
@@ -110,7 +111,7 @@ export default async function Page({
         <Button variant="link" className="px-2 text-base" asChild>
           <Link href="/blog">
             <ChevronLeftIcon className="size-5" />
-            Blog
+            Kho kiến thức
           </Link>
         </Button>
       </div>
@@ -141,6 +142,6 @@ export default async function Page({
       </Prose>
 
       <div className="screen-line-before h-4 w-full" />
-    </>
+    </SiteShell>
   );
 }

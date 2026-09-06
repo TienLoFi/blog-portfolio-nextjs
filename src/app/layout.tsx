@@ -5,9 +5,7 @@ import "@/styles/globals.css";
 import { useEffect, useState } from "react";
 
 import { Providers } from "@/components/providers";
-import { META_THEME_COLORS, SITE_INFO } from "@/config/site";
-import { USER } from "@/data/user";
-import { LanguageProvider } from "@/hooks/use-language";
+import { META_THEME_COLORS } from "@/config/site";
 import { fontMono, fontSans } from "@/lib/fonts";
 
 export default function RootLayout({
@@ -56,9 +54,7 @@ export default function RootLayout({
       </head>
 
       <body>
-        <LanguageProvider>
-          <Providers>{children}</Providers>
-        </LanguageProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
