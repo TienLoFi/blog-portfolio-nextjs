@@ -59,10 +59,10 @@ This project utilizes **shadcn Registry**, which allows you to manage and distri
 If you're working on a different React project and want to reuse the custom components from this repository, you can add them using the **shadcn CLI** with the following commands:
 
 ```bash
-npx shadcn@latest add https://ngoctien.com/r/cn.json
-npx shadcn@latest add https://ngoctien.com/r/theme-switcher.json
-npx shadcn@latest add https://ngoctien.com/r/flip-sentences.json
-npx shadcn@latest add https://ngoctien.com/r/apple-hello-effect.json
+npx shadcn@latest add https://hangoctien.vercel.app/r/cn.json
+npx shadcn@latest add https://hangoctien.vercel.app/r/theme-switcher.json
+npx shadcn@latest add https://hangoctien.vercel.app/r/flip-sentences.json
+npx shadcn@latest add https://hangoctien.vercel.app/r/apple-hello-effect.json
 ```
 
 > Note: These components are compatible with [Tailwind CSS v4](https://tailwindcss.com/blog/tailwindcss-v4) and [React 19](https://react.dev/blog/2024/12/05/react-19).

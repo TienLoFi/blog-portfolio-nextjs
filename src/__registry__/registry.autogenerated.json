@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "ngoctien/ui",
-  "homepage": "https://ngoctien.com/ui",
+  "homepage": "https://hangoctien.vercel.app/ui",
   "items": [
     {
       "name": "cn",
@@ -26,7 +26,7 @@
         "motion"
       ],
       "registryDependencies": [
-        "https://ngoctien.com/r/cn.json"
+        "https://hangoctien.vercel.app/r/cn.json"
       ],
       "files": [
         {
@@ -42,7 +42,7 @@
         "motion"
       ],
       "registryDependencies": [
-        "https://ngoctien.com/r/cn.json"
+        "https://hangoctien.vercel.app/r/cn.json"
       ],
       "files": [
         {

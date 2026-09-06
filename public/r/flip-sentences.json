@@ -6,7 +6,7 @@
     "motion"
   ],
   "registryDependencies": [
-    "https://ngoctien.com/r/cn.json"
+    "https://hangoctien.vercel.app/r/cn.json"
   ],
   "files": [
     {

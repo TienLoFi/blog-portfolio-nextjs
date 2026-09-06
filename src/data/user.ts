@@ -13,7 +13,7 @@ export const USER = {
   address: "Thu Duc, Ho Chi Minh City, Viet Nam",
   phoneNumber: "+84" + "369" + "864" + "072", // E.164 format
   email: "ngoctien9940" + "@" + "gmail" + "." + "com",
-  website: "https://ngoctien.com",
+  website: "https://hangoctien.vercel.app",
 
   dateOfBirth: "2003-01-10", // YYYY-MM-DD
   jobTitle: "Software Developer",

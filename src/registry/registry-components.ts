@@ -5,7 +5,7 @@ export const components: Registry["items"] = [
     name: "theme-switcher",
     type: "registry:component",
     dependencies: ["next-themes", "lucide-react", "motion"],
-    registryDependencies: ["https://ngoctien.com/r/cn.json"],
+    registryDependencies: ["https://hangoctien.vercel.app/r/cn.json"],
     files: [
       {
         path: "theme-switcher/theme-switcher.tsx",
@@ -17,7 +17,7 @@ export const components: Registry["items"] = [
     name: "flip-sentences",
     type: "registry:component",
     dependencies: ["motion"],
-    registryDependencies: ["https://ngoctien.com/r/cn.json"],
+    registryDependencies: ["https://hangoctien.vercel.app/r/cn.json"],
     files: [
       {
         path: "flip-sentences/flip-sentences.tsx",

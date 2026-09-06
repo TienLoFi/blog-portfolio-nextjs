@@ -6,7 +6,7 @@ import { lib } from "./registry-lib";
 
 export const registry = {
   name: "ngoctien/ui",
-  homepage: "https://ngoctien.com/ui",
+  homepage: "https://hangoctien.vercel.app/ui",
   items: [
     ...lib,
     ...components,

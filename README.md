@@ -1,6 +1,6 @@
-# ngoctien.com
+# hangoctien.vercel.app
 
-[ngoctien.com](https://ngoctien.com) is Hà Ngọc Tiến's personal portfolio for projects, experience, and software development notes.
+[hangoctien.vercel.app](https://hangoctien.vercel.app) is Hà Ngọc Tiến's personal portfolio for projects, experience, and software development notes.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./public/images/Screenshot.png">
