@@ -17,7 +17,7 @@ export const PROJECTS: Project[] = [
       "Blade Templates",
       "Laravel Auth & Middleware",
       "React Dom",
-      "Tailwind CSS"
+      "Tailwind CSS",
     ],
   },
   {
@@ -32,22 +32,12 @@ export const PROJECTS: Project[] = [
       "Blade Templates",
       "Laravel Auth & Middleware",
     ],
-
   },
   {
     id: "zudo-app",
     title: "zudo.vn",
     time: "03.2024 - present",
     link: "https://zudo.vn",
-    tags: [
-      "Flutter",
-      "Dart",
-      "PHP Laravel",
-      "MySQL",
-      "RESTful API",
-      "AWS S3",
-    ],
-
+    tags: ["Flutter", "Dart", "PHP Laravel", "MySQL", "RESTful API", "AWS S3"],
   },
-
 ];

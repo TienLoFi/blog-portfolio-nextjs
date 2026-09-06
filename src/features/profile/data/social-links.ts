@@ -34,7 +34,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     icon: "mail",
     title: "Email",
-    description:  "ngoctien9940" + "@" + "gmail" + "." + "com",
+    description: "ngoctien9940" + "@" + "gmail" + "." + "com",
     href: "mailto:ngoctien9940@gmail.com",
   },
 ];

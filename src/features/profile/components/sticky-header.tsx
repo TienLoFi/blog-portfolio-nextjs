@@ -3,9 +3,9 @@
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import Link from "next/link";
 
-import { NgocTienMark } from "@/components/ngoc-tien-mark";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { NavItemGitHub } from "@/components/nav-item-github";
+import { NgocTienMark } from "@/components/ngoc-tien-mark";
 import { ToggleTheme } from "@/components/toggle-theme";
 
 import { NavDropdown } from "./nav/nav-dropdown";

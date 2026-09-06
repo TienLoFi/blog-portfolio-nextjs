@@ -7,9 +7,10 @@ updatedAt: 2024-05-21
 ---
 
 ## Câu 1. Cấu Trúc Route Cơ Bản
+
 ```php
 Route::get('/user', [UserController::class, 'index']);
-````
+```
 
 Gửi request GET đến `/user`, gọi phương thức `index` trong `UserController`.
 
@@ -116,8 +117,8 @@ if (!Auth::check()) {
 
 ## Câu 12. So sánh: find vs findOrFail
 
-* `find`: Trả về `null` nếu không tìm thấy.
-* `findOrFail`: Nếu không tìm thấy sẽ tự động trả về lỗi 404.
+- `find`: Trả về `null` nếu không tìm thấy.
+- `findOrFail`: Nếu không tìm thấy sẽ tự động trả về lỗi 404.
 
 ---
 
@@ -216,4 +217,3 @@ $users = User::with('posts')->get();
 Lấy user + các bài viết (posts) liên quan chỉ trong 1 truy vấn duy nhất.
 
 ---
-

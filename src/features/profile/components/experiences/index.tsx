@@ -16,7 +16,7 @@ export function Experiences() {
   return (
     <Panel id="experience" className="scroll-mt-[4.75rem]">
       <PanelHeader>
-      <PanelTitle>{t("profile.experiences.title")}</PanelTitle>
+        <PanelTitle>{t("profile.experiences.title")}</PanelTitle>
       </PanelHeader>
 
       <AccordionPrimitive.Root

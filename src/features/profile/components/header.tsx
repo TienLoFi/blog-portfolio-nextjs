@@ -1,18 +1,20 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { Markdown } from "@/components/markdown";
 import { NavItemGitHub } from "@/components/nav-item-github";
+import { NgocTienMark } from "@/components/ngoc-tien-mark";
 import { ToggleTheme } from "@/components/toggle-theme";
 import { Prose } from "@/components/ui/typography";
 import { USER } from "@/data/user";
 import { useTranslation } from "@/hooks/use-translation";
 
-import { NgocTienAvatar } from "./ngoc-tien-avatar";
 import { Nav } from "./nav/nav";
 import { NavDropdown } from "./nav/nav-dropdown";
+import { NgocTienAvatar } from "./ngoc-tien-avatar";
 import { SocialLinks } from "./social-links";
 
 export function Header() {
@@ -45,7 +47,13 @@ export function Header() {
 
   return (
     <header className="relative mt-12">
-      <div className="flex h-12 items-center justify-end gap-4 border-x border-grid px-2">
+      <div className="flex h-12 items-center gap-4 border-x border-grid px-2">
+        <Link href="/" aria-label="Ngọc Tiến">
+          <NgocTienMark className="h-8" />
+        </Link>
+
+        <div className="flex-1" />
+
         <Nav className="max-sm:hidden" />
 
         <div className="flex items-center gap-2">

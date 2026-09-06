@@ -17,8 +17,7 @@ export function About() {
 
       <PanelContent>
         <Prose>
-          <Markdown>
-          {t("about")}</Markdown>
+          <Markdown>{t("about")}</Markdown>
         </Prose>
       </PanelContent>
     </Panel>

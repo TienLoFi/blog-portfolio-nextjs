@@ -12,6 +12,9 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  {
+    ignores: [".next/**", "next-env.d.ts"],
+  },
   ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
   {
     plugins: {
@@ -40,6 +43,7 @@ const eslintConfig = [
             "src/data/**/*",
             "src/hooks/**/*",
             "src/lib/**/*",
+            "src/messages/**/*",
             "src/registry/**/*",
             "src/styles/**/*",
             "src/types/**/*",
